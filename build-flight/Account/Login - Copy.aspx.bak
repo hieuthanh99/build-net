@@ -1,0 +1,66 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Account_Login" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>QUẢN LÝ KẾ HOẠCH THU CHI</title>
+    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../Content/css/default.css" rel="stylesheet" />
+    <link href="../Content/Site.css" rel="stylesheet" />
+    <script>
+        function beforeLogin(s, e) {
+            if (document.getElementById('tbUserName').value == '') {
+                alert('User name must be enterd!');
+                return false;
+            }
+            if (document.getElementById('tbPassword').value == '') {
+                alert('Password must be enterd!');
+                return false;
+            }
+        }
+    </script>
+</head>
+<body class="bg_login">
+    <form id="form1" runat="server">
+        <div class="form_login_css">
+            <div class="login_title_css">
+                <%--ĐĂNG NHẬP HỆ THỐNG--%>
+                <br />
+                <span class="error_message_css">
+                    <asp:Literal ID="lbNotice" runat="server"></asp:Literal></span>
+            </div>
+
+            <%--<div class="hundress_percent_css row_css">
+                <div class="row_title_css">Application</div>
+                <div class="txtbox_css">
+                    <asp:DropDownList ID="cboApplication" ClientIDMode="Static" CssClass="form-control" runat="server" OnInit="cbo_Init"></asp:DropDownList>
+                </div>
+            </div>--%>
+            <br />
+            <div class="hundress_percent_css row_css">
+                <div class="row_title_css">User name</div>
+                <div class="txtbox_css">
+                    <asp:TextBox ID="tbUserName" ClientIDMode="Static" CssClass="form-control" runat="server"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="hundress_percent_css row_css">
+                <div class="row_title_css">Password</div>
+                <div class="txtbox_css">
+                    <asp:TextBox ID="tbPassword" ClientIDMode="Static" TextMode="Password" CssClass="form-control" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="hundress_percent_css row_css">
+                <div class="row_title_css">&nbsp;</div>
+                <div class="txtbox_css">
+                    <br />
+                    <asp:Button ID="btnSignIn" ClientIDMode="Static" CssClass="btn btn-success" Text="Sign In" OnClick="btnSignIn_Click" runat="server" OnClientClick="beforeLogin"></asp:Button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,139 @@
+﻿.main-container {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(100% - 75px);
+    /*min-width: 560px;*/
+}
+
+.header-pane {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 30px;
+    right: 0;
+    -webkit-transition: left 300ms ease;
+    -moz-transition: left 300ms ease;
+    -o-transition: left 300ms ease;
+    transition: left 300ms ease;
+    box-shadow: 0 3px 3px -3px rgba(0,0,0,0.4);
+    z-index: 0;
+    background: #FFFFFF;
+}
+
+.content-pane {
+    position: absolute;
+    -webkit-transition: left 300ms ease;
+    -moz-transition: left 300ms ease;
+    -o-transition: left 300ms ease;
+    transition: left 300ms ease;
+    left: 2px;
+    top: 0;
+    right: 2px;
+    bottom: 0;
+    background: #FFFFFF;
+    width: 100%;
+}
+
+.left-pane {
+    -webkit-transition: width 300ms ease;
+    -moz-transition: width 300ms ease;
+    -o-transition: width 300ms ease;
+    transition: width 300ms ease;
+    position: fixed;
+    width: 0;
+    top: 75px;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background: #FFFFFF;
+    height: calc(100% - 75px);
+}
+
+.show-menu .left-pane {
+    width: 700px;
+}
+
+.show-menu .content-pane,
+.show-menu .header-pane {
+    display: block;
+    background: #000 !important;
+    opacity: 0.5;
+}
+
+.show-menu .header-pane {
+    overflow: hidden;
+}
+
+
+.powered-text {
+    height: 18px;
+    line-height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px 0px 0px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+/*.left-pane {
+    background: #3a3a3a;
+}*/
+
+.left-pane .main-menu {
+    border: none;
+    background: transparent;
+    height: 100% !important;
+}
+
+    .left-pane .main-menu .item {
+        height: 32px;
+        /*padding: 6px 22px 12px;*/
+        font-size: 14px;
+    }
+
+        .left-pane .main-menu .item,
+        .left-pane .main-menu .item a {
+            color: #ff970f !important;
+        }
+
+    .left-pane .main-menu .selected-item {
+        background: #4e4e4e !important;
+        color: #ffffff !important;
+    }
+
+    .left-pane .main-menu .hover-item,
+    .left-pane .main-menu .hover-item a {
+        color: #ffffff !important;
+    }
+
+    .left-pane,
+    .left-pane .main-menu .selected-item,
+    .left-pane .main-menu .hover-item {
+        box-shadow: inset -15px 0 15px -15px black;
+    }
+
+
+.button {
+    border: none;
+    background: #00a9c4;
+    color: #FFFFFF !important;
+    font-size: 16px;
+    padding: 0px;
+}
+
+.checkbok-grid {
+    padding: 0px !important;
+}
+
+.grid-cell-readonly {
+    background: #ebebeb;
+}
+
+.dxichTextCellSys label {
+    font-weight: bold !important;
+}

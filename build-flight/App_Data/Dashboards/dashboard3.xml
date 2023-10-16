@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="Sản lượng, Doanh thu, Chi phí phục vụ mặt đất" Alignment="Left" />
+  <DataSources>
+    <SqlDataSource ComponentName="DataSource1">
+      <Name>CustomSqlQuery</Name>
+      <Connection Name="KTQT_Data_Connection" FromAppConfig="true" />
+      <Query Type="CustomSqlQuery" Name="CustomSqlQuery">
+        <Parameter Name="pAreaCode" Type="DevExpress.DataAccess.Expression">(null)([Parameters.AreaCode])</Parameter>
+        <Parameter Name="pFromDate" Type="DevExpress.DataAccess.Expression">(null)([Parameters.FromDate])</Parameter>
+        <Parameter Name="pToDate" Type="DevExpress.DataAccess.Expression">(null)([Parameters.ToDate])</Parameter>
+        <Sql>SELECT * FROM DB_RevCostDashboard
+--WHERE FLT_DATE between @pFromDate  and @pToDate
+--and (AREA= @pAreaCode OR @pAreaCode ='ALL')</Sql>
+      </Query>
+      <Query Type="CustomSqlQuery" Name="RepTotalCostByRepID">
+        <Parameter Name="pAreaCode" Type="DevExpress.DataAccess.Expression">(null)([Parameters.AreaCode])</Parameter>
+        <Parameter Name="pFromDate" Type="DevExpress.DataAccess.Expression">(null)([Parameters.FromDate])</Parameter>
+        <Parameter Name="pToDate" Type="DevExpress.DataAccess.Expression">(null)([Parameters.ToDate])</Parameter>
+        <Sql>SELECT * FROM DB_CostDashboard
+--WHERE FLT_DATE between @pFromDate  and @pToDate
+--and (AREA= @pAreaCode OR @pAreaCode ='ALL')</Sql>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+      <CalculatedFields>
+        <CalculatedField Name="REV_COST" Expression="Iif([TOTAL_REV] Is Null, 0, [TOTAL_REV]) - Iif([TOTAL_COST] Is Null, 0, [TOTAL_COST])" DataType="Auto" DataMember="CustomSqlQuery" />
+      </CalculatedFields>
+    </SqlDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="AreaCode" Value="ALL" Description="Area Code" Visible="false">
+      <StaticListLookUpSettings>
+        <Values>
+          <Value>ALL</Value>
+          <Value>SGN</Value>
+          <Value>HAN</Value>
+          <Value>DAD</Value>
+        </Values>
+      </StaticListLookUpSettings>
+    </Parameter>
+    <Parameter Name="FromDate" Type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Value="2019-01-01T00:00:00" Description="From Date" Visible="false" />
+    <Parameter Name="ToDate" Type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Value="2019-05-31T00:00:00.186" Description="To Date" Visible="false" />
+  </Parameters>
+  <Items>
+    <ListBox ComponentName="listBoxDashboardItem4" Name="Area" DataSource="DataSource1" DataMember="CustomSqlQuery" IsMasterFilterCrossDataSource="true" ListBoxType="Radio">
+      <DataItems>
+        <Dimension DataMember="Area" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="Carrier" DataSource="DataSource1" DataMember="CustomSqlQuery" IsMasterFilterCrossDataSource="true" EnableSearch="true">
+      <DataItems>
+        <Dimension DataMember="CARRIER" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <ListBox ComponentName="listBoxDashboardItem2" Name="Network" DataSource="DataSource1" DataMember="CustomSqlQuery" IsMasterFilterCrossDataSource="true">
+      <DataItems>
+        <Dimension DataMember="NETWORK" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Card ComponentName="cardDashboardItem1" Name="Sản lượng, doanh thu, chi phí chuyến bay" ShowCaption="false" DataSource="DataSource1" DataMember="CustomSqlQuery">
+      <DataItems>
+        <Measure DataMember="FLS_FULL" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="TOTAL_REV" DefaultId="DataItem1">
+          <NumericFormat FormatType="Number" Unit="Billions" IncludeGroupSeparator="true" CurrencyCultureName="vi-VN" />
+        </Measure>
+        <Measure DataMember="TOTAL_COST" DefaultId="DataItem2">
+          <NumericFormat FormatType="Number" Unit="Billions" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="REV_COST" DefaultId="DataItem3">
+          <NumericFormat FormatType="Number" Unit="Billions" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <Card Name="Sản lượng chuyến bay">
+        <ActualValue DefaultId="DataItem0" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="100" Type="Lightweight">
+          <MainValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="Subtitle" DimensionIndex="0" />
+          <DeltaIndicator Visible="false" />
+          <Sparkline Visible="false" />
+        </LayoutTemplate>
+      </Card>
+      <Card Name="Doanh thu (tỷ đồng)">
+        <ActualValue DefaultId="DataItem1" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="100" Type="Lightweight">
+          <MainValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="Subtitle" DimensionIndex="0" />
+          <DeltaIndicator Visible="false" />
+          <Sparkline Visible="false" />
+        </LayoutTemplate>
+      </Card>
+      <Card Name="Chi phí (tỷ đồng)">
+        <ActualValue DefaultId="DataItem2" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="100" Type="Lightweight">
+          <MainValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="Subtitle" DimensionIndex="0" />
+          <DeltaIndicator Visible="false" />
+          <Sparkline Visible="false" />
+        </LayoutTemplate>
+      </Card>
+      <Card Name="Lỗ/Lãi (tỷ đồng)">
+        <ActualValue DefaultId="DataItem3" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="100" Type="Lightweight">
+          <MainValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="Subtitle" DimensionIndex="0" />
+          <DeltaIndicator Visible="false" />
+          <Sparkline Visible="false" />
+        </LayoutTemplate>
+      </Card>
+    </Card>
+    <ListBox ComponentName="listBoxDashboardItem3" Name="Flight Type" DataSource="DataSource1" DataMember="CustomSqlQuery" IsMasterFilterCrossDataSource="true">
+      <DataItems>
+        <Dimension DataMember="FLT_TYPE" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Chart ComponentName="chartDashboardItem1" Name="Biểu đồ sản lượng" ShowCaption="false" DataSource="DataSource1" DataMember="CustomSqlQuery">
+      <DataItems>
+        <Dimension DataMember="Flt_Date" DateTimeGroupInterval="MonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="Area" DefaultId="DataItem2" />
+        <Measure DataMember="FLS_FULL" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="Sản lượng" />
+          <Series>
+            <Simple SeriesType="StackedBar">
+              <Value DefaultId="DataItem0" />
+              <PointLabelOptions ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem2" Name="Biểu đồ doanh thu" ShowCaption="false" DataSource="DataSource1" DataMember="CustomSqlQuery">
+      <DataItems>
+        <Dimension DataMember="Flt_Date" DateTimeGroupInterval="MonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="Area" DefaultId="DataItem2" />
+        <Measure DataMember="TOTAL_REV" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Unit="Billions" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="Doanh thu(tỷ đồng)" />
+          <Series>
+            <Simple SeriesType="StackedBar">
+              <Value DefaultId="DataItem0" />
+              <PointLabelOptions ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem3" Name="Biểu đồ chi phí" ShowCaption="false" DataSource="DataSource1" DataMember="CustomSqlQuery">
+      <DataItems>
+        <Dimension DataMember="Flt_Date" DateTimeGroupInterval="MonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="Area" DefaultId="DataItem2" />
+        <Measure DataMember="TOTAL_COST" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Unit="Billions" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="Chi phí(tỷ đồng)" />
+          <Series>
+            <Simple SeriesType="StackedBar">
+              <Value DefaultId="DataItem0" />
+              <PointLabelOptions ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Pie ComponentName="pieDashboardItem1" Name="Chi phí theo 8 nhóm yếu tố" ShowCaption="false" DataSource="DataSource1" DataMember="RepTotalCostByRepID" LabelContentType="ArgumentValueAndPercent">
+      <DataItems>
+        <Measure DataMember="TOTAL_COST" Name="Chi phí theo 8 nhóm yếu tố" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Unit="Billions" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="GroupName" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
+    </Pie>
+    <Pie ComponentName="pieDashboardItem2" Name="Doanh thu theo loại hợp đồng" ShowCaption="false" DataSource="DataSource1" DataMember="CustomSqlQuery" LabelContentType="ArgumentValueAndPercent">
+      <DataItems>
+        <Measure DataMember="TOTAL_REV" Name="Doanh thu theo loại hợp đồng" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Unit="Billions" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="ContractType" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
+    </Pie>
+    <Chart ComponentName="chartDashboardItem4" Name="Lỗ/Lãi(tỷ đồng)" ShowCaption="false" DataSource="DataSource1" DataMember="CustomSqlQuery">
+      <DataItems>
+        <Dimension DataMember="Flt_Date" DateTimeGroupInterval="MonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="Area" DefaultId="DataItem2" />
+        <Measure DataMember="REV_COST" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Unit="Billions" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="Lỗ/Lãi(tỷ đồng)" />
+          <Series>
+            <Simple Name="Lỗ/Lãi(tỷ đồng)" SeriesType="StackedBar">
+              <Value DefaultId="DataItem0" />
+              <PointLabelOptions ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <RangeFilter ComponentName="rangeFilterDashboardItem1" Name="Range Filter 1" DataSource="DataSource1" DataMember="CustomSqlQuery" IsMasterFilterCrossDataSource="true">
+      <DataItems>
+        <Dimension DataMember="Flt_Date" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem1" />
+        <Measure DataMember="TOTAL_REV" DefaultId="DataItem0" />
+      </DataItems>
+      <Argument DefaultId="DataItem1" />
+      <Series>
+        <Simple Name="Total Revenue" SeriesType="Line">
+          <Value DefaultId="DataItem0" />
+        </Simple>
+      </Series>
+    </RangeFilter>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Weight="100">
+      <LayoutGroup Orientation="Vertical" Weight="100">
+        <LayoutGroup Weight="174.384236453202">
+          <LayoutGroup Orientation="Vertical" Weight="11.992218035365832">
+            <LayoutItem DashboardItem="listBoxDashboardItem4" Weight="93.543352129615812" />
+            <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="140.31201446600227" />
+            <LayoutItem DashboardItem="listBoxDashboardItem2" Weight="76.921182245082363" />
+            <LayoutItem DashboardItem="listBoxDashboardItem3" Weight="83.667856080880156" />
+          </LayoutGroup>
+          <LayoutGroup Orientation="Vertical" Weight="188.00778196463415">
+            <LayoutGroup Weight="49.945608286234531">
+              <LayoutItem DashboardItem="rangeFilterDashboardItem1" Weight="45.205797607364453" />
+              <LayoutItem DashboardItem="cardDashboardItem1" Weight="54.68541896510461" />
+            </LayoutGroup>
+            <LayoutGroup Weight="201.05973897681312">
+              <LayoutItem DashboardItem="chartDashboardItem2" Weight="152.60550535798484" />
+              <LayoutItem DashboardItem="chartDashboardItem3" Weight="164.80690780364623" />
+              <LayoutItem DashboardItem="chartDashboardItem4" Weight="154.94389135760881" />
+            </LayoutGroup>
+            <LayoutGroup Weight="186.53383675180797">
+              <LayoutItem DashboardItem="chartDashboardItem1" Weight="133.61692851763246" />
+              <LayoutItem DashboardItem="pieDashboardItem2" Weight="144.56880282857773" />
+              <LayoutItem DashboardItem="pieDashboardItem1" Weight="135.50194694434714" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

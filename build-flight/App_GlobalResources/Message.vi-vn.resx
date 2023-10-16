@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MSG-0001" xml:space="preserve">
+    <value>File cùng tên đã được upload và đã được xử lý trên hệ thống.</value>
+  </data>
+  <data name="MSG-0002" xml:space="preserve">
+    <value>Bạn có muốn thay đổi các giá trị vừa nhập không?</value>
+  </data>
+  <data name="MSG-0003" xml:space="preserve">
+    <value>Tên đăng nhập không được bỏ trống!</value>
+  </data>
+  <data name="MSG-0004" xml:space="preserve">
+    <value>Tên đăng nhập đã tồn tại</value>
+  </data>
+  <data name="MSG-0005" xml:space="preserve">
+    <value>Địa chỉ email đã được sử dụng bởi người dùng khác</value>
+  </data>
+  <data name="MSG-0006" xml:space="preserve">
+    <value>Nhóm người dùng không được bỏ trống!</value>
+  </data>
+  <data name="MSG-0007" xml:space="preserve">
+    <value>Nhóm người dùng đã tồn tại!</value>
+  </data>
+  <data name="MSG-0008" xml:space="preserve">
+    <value>Tên nhóm không được bỏ trống!</value>
+  </data>
+  <data name="MSG-0009" xml:space="preserve">
+    <value>Mã đơn giá đã tồn tại!</value>
+  </data>
+  <data name="MSG-0010" xml:space="preserve">
+    <value>Mã khuyến mại đã tồn tại!</value>
+  </data>
+  <data name="MSG-0011" xml:space="preserve">
+    <value>Có lỗi khi kiểm tra dữ liệu. Không thể Duyệt!</value>
+  </data>
+  <data name="MSG-0012" xml:space="preserve">
+    <value>Dữ liệu đã được duyệt!</value>
+  </data>
+  <data name="MSG-0013" xml:space="preserve">
+    <value>Upload dữ liệu thành công</value>
+  </data>
+  <data name="MSG-0014" xml:space="preserve">
+    <value>Vui lòng lưu lại dữ liệu đã thay đổi trước khi thực hiện chức năng này</value>
+  </data>
+  <data name="MSG-0015" xml:space="preserve">
+    <value>Bạn chắc chắn muốn xóa bản ghi này?</value>
+  </data>
+  <data name="MSG-0016" xml:space="preserve">
+    <value>Xác nhận Duyệt?</value>
+  </data>
+  <data name="MSG-0017" xml:space="preserve">
+    <value>Kính gửi Đối Tác
+ 
+File dữ liệu đã upload thành công, trong đó:
+.  Tên file: {0}  ( {1} records ).
+.  {2} record xử lý thành công ( xem file UploadSuccess...csv ).
+.  {3} record bị lỗi  ( xem các file còn lại ).
+ 
+Đề nghị Đối tác kiểm tra File lỗi, cập nhật các trường hợp sai tên , sai số thẻ vào file cộng dặm kỳ tới.
+Gửi xác nhận cộng dặm &amp; gửi lại File đối với những trường hợp bị vượt quá hạn mức chi tiêu , cộng dặm.
+
+Trân trọng.</value>
+  </data>
+  <data name="MSG-0018" xml:space="preserve">
+    <value>Bạn đã tạo dữ liệu cho ngày hôm nay. Bạn có muốn tạo file mới không?</value>
+  </data>
+  <data name="MSG-0019" xml:space="preserve">
+    <value>File trùng tên đã được Upload và đã Duyệt. Bạn không thể Upload file này.</value>
+  </data>
+  <data name="MSG-0020" xml:space="preserve">
+    <value>File trùng tên đã được Upload. Bạn không thể Upload file này.</value>
+  </data>
+  <data name="MSG-0021" xml:space="preserve">
+    <value>Bạn chưa chọn đối tác upload.</value>
+  </data>
+  <data name="MSG-0022" xml:space="preserve">
+    <value>Bạn chắc chắn muôn upload file  {0} cho mục {1}?</value>
+  </data>
+  <data name="MSG-0023" xml:space="preserve">
+    <value>Lỗi: Thời gian bị lồng nhau</value>
+  </data>
+  <data name="MSG-0024" xml:space="preserve">
+    <value>Giờ không hợp lệ</value>
+  </data>
+  <data name="MSG-0025" xml:space="preserve">
+    <value>Diễn giải là duy nhất, vui lòng kiểm tra và thử lại!</value>
+  </data>
+  <data name="MSG-0026" xml:space="preserve">
+    <value>Cập nhật xong!</value>
+  </data>
+  <data name="MSG-0027" xml:space="preserve">
+    <value>Tên file không hợp lệ!</value>
+  </data>
+  <data name="MSG-0028" xml:space="preserve">
+    <value>Dữ liệu đã được duyệt.</value>
+  </data>
+  <data name="MSG-0029" xml:space="preserve">
+    <value>Bạn chắc chắn muốn ẩn mã đối tác này?</value>
+  </data>
+  <data name="MSG-0030" xml:space="preserve">
+    <value>Bạn phải nhập vào địa chỉ email đối tác!</value>
+  </data>
+  <data name="MSG-0031" xml:space="preserve">
+    <value>Bạn phải chọn loại file trước khi Upload dữ liệu!</value>
+  </data>
+  <data name="MSG-0032" xml:space="preserve">
+    <value>Bạn phải chọn tháng trước khi Upload dữ liệu!</value>
+  </data>
+  <data name="MSG-0033" xml:space="preserve">
+    <value>Bạn xác nhận đã kiểm tra dữ liệu đúng?</value>
+  </data>
+  <data name="MSG-0034" xml:space="preserve">
+    <value>Bạn phải chọn một loại đơn giá cộng dặm!</value>
+  </data>
+  <data name="MSG-0035" xml:space="preserve">
+    <value>Bạn phải chọn một mã lỗi trước khi thực hiện chức năng này!</value>
+  </data>
+  <data name="MSG-0036" xml:space="preserve">
+    <value>Mã đối tác khôn hợp lệ!</value>
+  </data>
+  <data name="MSG-0037" xml:space="preserve">
+    <value>Lưu thành công!</value>
+  </data>
+  <data name="MSG-0038" xml:space="preserve">
+    <value>Thư mục {0} đã tồn tại. Vui lòng chọn một tên khác.</value>
+  </data>
+</root>

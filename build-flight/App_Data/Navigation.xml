@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item Text="Mail" NavigateUrl="~/Default.aspx" SpriteClassName="Sprite_Mail" />  
+  <Item Text="Contacts" NavigateUrl="~/Pages/Contacts.aspx" SpriteClassName="Sprite_Mail" />
+  <Item Text="Create Inbox Rules" NavigateUrl="~/Pages/InboxRules.aspx" SpriteClassName="Sprite_Mail" />
+  <Item Text="Setings" NavigateUrl="~/Pages/Settings.aspx" SpriteClassName="Sprite_Mail" />
+</Items>

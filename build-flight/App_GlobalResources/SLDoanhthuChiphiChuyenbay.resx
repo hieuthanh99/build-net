@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="customSqlQuery1.Sql" xml:space="preserve">
+    <value>SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED 
+SELECT AREA, FLT_MONTH, FLT_YEAR, CARRIER, AC_ID,  SECTOR,  FLT_TYPE, NETWORK, STATUS,
+SUM(FLS) FLS_ALL,
+SUM(IIf(STATUS = 'OK' AND GHID = 1, FLS, 0)) FLS_FULL,
+SUM(REV)  REV,
+SUM(OTH_REV) OTH_REV,
+SUM(TOTAL_REV) TOTAL_REV,
+SUM(COST) COST,
+SUM(ONBEHALFOFCTY) ONBEHALFOFCTY,
+SUM(COSTCTY) COSTCTY,
+SUM(COST_BRANCH) COST_BRANCH,
+SUM(Cost_BDS) Cost_BDS,
+SUM(Cost_KST) Cost_KST,
+SUM(BDS_Disb) BDS_DISB,
+SUM(KST_Disb) KST_DISB,
+ISNULL(SUM(COST), 0) + ISNULL(SUM(ONBEHALFOFCTY), 0) + ISNULL(SUM(COSTCTY), 0) + ISNULL(SUM(COST_BRANCH), 0) + ISNULL(SUM(Cost_BDS), 0) + ISNULL(SUM(Cost_KST), 0) + ISNULL(SUM(BDS_Disb), 0) + ISNULL(SUM(KST_DISB), 0) TOTAL_COST
+FROM (
+Select FLT.AREA, Flt.FLT_MONTH, Flt.FLT_YEAR, Flt.CARRIER, Flt.AC_GROUP AS AC_ID,  Flt.SECTOR,  Flt.FLT_TYPE, Flt.NETWORK, Flt.STATUS, Flt.GHID,
+Flt.FLS FLS,
+ISNULL(Flt.REV, 0) - (ISNULL(Flt.ALLOCATE_OTH_REV, 0) - ISNULL(Flt.DISCOUNT, 0)) REV,
+ISNULL(Flt.ALLOCATE_OTH_REV, 0) - ISNULL(Flt.DISCOUNT, 0) OTH_REV,
+Flt.REV  TOTAL_REV,
+Ops.Cost_Branch COST,
+Ops.Cost_Branch_Disb ONBEHALFOFCTY,
+Ops.Cost_CTY COSTCTY,
+Ops.Cost_Disb COST_BRANCH,
+Ops.Cost_BDS,
+Ops.Cost_KST,
+Ops.BDS_Disb,
+Ops.KST_Disb
+FROM V_FLT_OPS Flt LEFT OUTER JOIN (Select SUM(f.Cost_Branch) Cost_Branch,
+				SUM(f.Cost_Branch_Disb) Cost_Branch_Disb,
+				SUM(f.Cost_CTY) Cost_CTY,
+				SUM(f.Cost_Disb) Cost_Disb,
+				SUM(f.Cost_BDS) Cost_BDS,
+				SUM(f.Cost_KST) Cost_KST,
+				SUM(f.BDS_Disb) BDS_Disb,
+				SUM(f.KST_Disb) KST_Disb,
+				f.FltOpsID  
+				FROM RouteProfitFact f 
+				WHERE f.VersionID = @pVersionID 
+				AND ((f.CostType = @pCostType) OR @pCostType = 'ALL') 
+			     	Group By f.FltOpsID) Ops  On Ops.FltOpsID = Flt.ID
+where Flt.FLT_DATE between @pFromDate and @pToDate
+and (Flt.area = @pAreaCode OR @pAreaCode ='ALL')
+and ((Flt.CARRIER IN (Select Result From dbo.StrToTbl(@pCarrier, ','))) OR @pCarrier ='ALL')
+and (Flt.NETWORK= @pNetwork OR @pNetwork ='ALL')
+and ((Flt.FLT_TYPE IN (Select Result  From dbo.StrToTbl(@pFltType, ','))) OR @pFltType ='ALL')
+UNION ALL
+SELECT AREA, FLT_MONTH, FLT_YEAR, CARRIER, AC_GROUP AS AC_ID,  SECTOR,  FLT_TYPE, NETWORK, STATUS, GHID,
+FLS,
+ISNULL(REV, 0) - (ISNULL(ALLOCATE_OTH_REV, 0) - ISNULL(DISCOUNT, 0)) REV,
+ISNULL(ALLOCATE_OTH_REV, 0) - ISNULL(DISCOUNT, 0) OTH_REV,
+REV  TOTAL_REV,
+0 COST, 0 ONBEHALFOFCTY, 0 COSTCTY, 0 COST_BRANCH, 0 Cost_BDS, 0 Cost_KST, 0 BDS_DISB, 0 KST_DISB
+FROM [V_FLT_OPS#FULL]
+WHERE FLT_DATE between @pFromDate  and @pToDate
+and (area = @pAreaCode OR @pAreaCode ='ALL')
+and ((CARRIER IN (Select Result From dbo.StrToTbl(@pCarrier, ','))) OR @pCarrier ='ALL')
+and (NETWORK= @pNetwork OR @pNetwork ='ALL')
+and ((FLT_TYPE IN (Select Result  From dbo.StrToTbl(@pFltType, ','))) OR @pFltType ='ALL')
+) T 
+Group by AREA, FLT_MONTH, FLT_YEAR, CARRIER, AC_ID,  SECTOR,  FLT_TYPE, NETWORK, STATUS
+Order By AREA, FLT_YEAR, FLT_MONTH, CARRIER, AC_ID, NETWORK, SECTOR, FLT_TYPE</value>
+  </data>
+  <data name="customSqlQuery2.Sql" xml:space="preserve">
+    <value>Select (Select VourcherNo FROM STG_KTQT.dbo.DT_Voucher_Header WHere VourcherID = 
+  (Select VourcherId From STG_KTQT.dbo.DT_Voucher_Detail d where d.VourcherDetailID = v.ID)) VourcherNo, 
+  Date, AreaCode, AirlinesID Carrier, Iif(servicegrouptype  = 8, Null, Amount) Amount, 
+  Iif(servicegrouptype  = 8, Amount, Null) Discount,	
+  ApplyFromDate, ApplyToDate
+  FROM V_VMS_OTH_REVENUE v 
+  CROSS JOIN (SELECT ISNULL(SysValue, 'M') Allocate_Method
+		   FROM QLKH_App.dbo.SystemParas 
+		   WHERE SysCode = 'ALLOCATE_METHOD') m 
+WHERE ((v.areacode=@pAreaCode) OR @pAreaCode = 'ALL')
+and  v.date between @pFromDate and @pToDate 
+And IsNull(v.Amount, 0) &lt;&gt; 0
+and v.servicegrouptype not in (3, 4, 10)
+and v.Allocated = 0
+--and  not exists (Select null From V_FLT_OPS f 
+--			where f.Carrier =  v.airlinesid And f.Area = v.AreaCode
+--			and f.Flt_date between v.ApplyFromDate and v.ApplyToDate
+--			And ((m.Allocate_Method = 'M' 
+--			And f.Flt_Month = Month(v.date) And f.Flt_Year = Year(v.date)) 
+--			OR m.Allocate_Method &lt;&gt; 'M')
+--			And ((m.Allocate_Method = 'M' 
+--			And f.Flt_date between @pFromDate and @pToDate) 
+--			OR m.Allocate_Method &lt;&gt; 'M')
+			--And f.Flt_Month = Month(v.date) And f.Flt_Year = Year(v.date)
+			--And f.Flt_date between @pFromDate and @pToDate
+--)
+Order By AreaCode, AirlinesID, Date</value>
+  </data>
+  <data name="customSqlQuery3.Sql" xml:space="preserve">
+    <value>Select s.Description, d.RevCostDate, d.RevCostMonth,d.RevCostYear, d.Amount, l.ErrMsg, l.Airport
+From StoreDetail d 
+Join Store s ON d.StoreID = s.StoreID 
+Join StoreAllocateLog l On s.StoreID = l.StoreID AND d.RevCostMonth = l.FltMonth
+WHERE s.VersionID= @pVersionID  AND ((Airport= @pAreaCode) OR @pAreaCode ='ALL')
+AND d.RevCostDate between @pFromDate and @pToDate And Isnull(d.Amount, 0) &lt;&gt; 0</value>
+  </data>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iQVJFQSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGTFRfTU9OVEgiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJGTFRfWUVBUiIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkNBUlJJRVIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQUNfSUQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU0VDVE9SIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkZMVF9UWVBFIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik5FVFdPUksiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU1RBVFVTIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkZMU19BTEwiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkZMU19GVUxMIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJSRVYiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik9USF9SRVYiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlRPVEFMX1JFViIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iQ09TVCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iT05CRUhBTEZPRkNUWSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iQ09TVENUWSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iQ09TVF9CUkFOQ0giIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkNvc3RfQkRTIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJDb3N0X0tTVCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iQkRTX0RJU0IiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IktTVF9ESVNCIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJUT1RBTF9DT1NUIiBUeXBlPSJEZWNpbWFsIiAvPjwvVmlldz48VmlldyBOYW1lPSJRdWVyeV8xIj48RmllbGQgTmFtZT0iVm91cmNoZXJObyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iQXJlYUNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ2FycmllciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkRpc2NvdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJBcHBseUZyb21EYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iQXBwbHlUb0RhdGUiIFR5cGU9IkRhdGVUaW1lIiAvPjwvVmlldz48VmlldyBOYW1lPSJRdWVyeV8yIj48RmllbGQgTmFtZT0iRGVzY3JpcHRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUmV2Q29zdERhdGUiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJSZXZDb3N0TW9udGgiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJSZXZDb3N0WWVhciIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkFtb3VudCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iRXJyTXNnIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFpcnBvcnQiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
+</root>

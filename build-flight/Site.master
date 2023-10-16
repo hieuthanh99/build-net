@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Root.master" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Mail" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="RootHolder" runat="Server">
+    <dx:ASPxSplitter ID="LayoutSplitter" runat="server" FullscreenMode="true" Width="100%" Height="100%" Orientation="Horizontal" SeparatorVisible="true" AllowResize="true">
+        <Panes>
+            <dx:SplitterPane Name="RightPane">
+                <Panes>
+                    <dx:SplitterPane Name="RightHeadPart" Size="75" AllowResize="False" Separator-Visible="False">
+                        <ContentCollection>
+                            <dx:SplitterContentControl runat="server">
+                                <dx:MainToolbar runat="server" />
+                            </dx:SplitterContentControl>
+                        </ContentCollection>
+                        <PaneStyle CssClass="HeadPane" BorderTop-BorderWidth="0">
+                            <BorderTop BorderWidth="0px"></BorderTop>
+                        </PaneStyle>
+                    </dx:SplitterPane>
+                    <dx:SplitterPane Separator-Visible="False" AllowResize="False">
+                        <Panes>
+                            <dx:SplitterPane Name="MainPane" ScrollBars="Auto">
+                                <PaneStyle>
+                                    <%--<BackgroundImage ImageUrl="Content/images/1banner.jpg" Repeat="NoRepeat" HorizontalPosition="center" VerticalPosition="top center" />--%>
+                                </PaneStyle>
+                                <%--<Panes>
+                                    <dx:SplitterPane AllowResize="False" Separator-Visible="False">
+                                        <Panes>
+                                            <dx:SplitterPane Size="250" ShowCollapseBackwardButton="True" ShowCollapseForwardButton="True">
+                                                <ContentCollection>
+                                                    <dx:SplitterContentControl runat="server">
+                                                        <dx:NavigationToolbar runat="server" ID="NavigationToolbar" />
+                                                    </dx:SplitterContentControl>
+                                                </ContentCollection>
+                                            </dx:SplitterPane>
+                                            <dx:SplitterPane>
+                                                <ContentCollection>
+                                                    <dx:SplitterContentControl runat="server">
+                                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server" />
+                                                    </dx:SplitterContentControl>
+                                                </ContentCollection>
+                                            </dx:SplitterPane>
+                                        </Panes>
+
+                                        <PaneStyle BorderTop-BorderWidth="0">
+                                            <BorderRight BorderWidth="0px"></BorderRight>
+                                            <BorderTop BorderWidth="0px"></BorderTop>
+                                        </PaneStyle>
+                                    </dx:SplitterPane>
+                                </Panes>--%>
+                                <ContentCollection>
+                                    <dx:SplitterContentControl runat="server">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server" />
+                                    </dx:SplitterContentControl>
+                                </ContentCollection>
+                            </dx:SplitterPane>
+                        </Panes>
+                    </dx:SplitterPane>
+                </Panes>
+                <PaneStyle CssClass="RightPane" />
+                <ContentCollection>
+                    <dx:SplitterContentControl runat="server"></dx:SplitterContentControl>
+                </ContentCollection>
+            </dx:SplitterPane>
+        </Panes>
+        <Styles>
+            <Pane Paddings-Padding="0">
+                <Paddings Padding="0px"></Paddings>
+            </Pane>
+        </Styles>
+    </dx:ASPxSplitter>
+
+</asp:Content>
+

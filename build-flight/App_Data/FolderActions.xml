@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item ToolTip="Create New Folder..." Name="NewFolder" SpriteClassName="Sprite_NewFolder" />
+  <Item ToolTip="Delete Folder..." Name="DeleteFolder" SpriteClassName="Sprite_DeleteFolder" />
+  <Item ToolTip="Create Inbox Rule..." Name="InboxRule"  NavigateUrl="~/Pages/InboxRules.aspx" SpriteClassName="Sprite_InboxRule" />
+  <Item ToolTip="Settings..." Name="Settings" SpriteClassName="Sprite_Settings" />
+</Items>

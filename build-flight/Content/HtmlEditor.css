@@ -1,0 +1,11 @@
+﻿body,
+body.dxhedesignviewarea /* or body.dxhedesignviewarea_{themepostfix} for a themed control  */
+{
+    font-family: 'Times New Roman';
+    font-size: 12pt;
+}
+
+table
+{
+    font-size: 12pt;
+}

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Pages>
+  <mail>       
+    <Item ToolTip="Check Messages" Name="refresh" SpriteClassName="Sprite_Refresh" />
+  </mail>
+</Pages>

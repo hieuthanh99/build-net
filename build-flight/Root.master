@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Root.master.cs" Inherits="Root" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server" enableviewstate="false">
+    <title>QUẢN LÝ KẾ HOẠCH THU-CHI LĨNH VỰC THƯƠNG MẠI</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <%-- <link type="text/css" rel="Stylesheet" href="Content/styles.css" />--%>
+
+    <link type="text/css" rel="Stylesheet" href="<%# Page.ResolveClientUrl("~/Content/styles.css") %>" />
+    <link type="text/css" rel="Stylesheet" href="<%# Page.ResolveClientUrl("~/Content/main-toolbar.css") %>" />
+
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/DNDAlert.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/jquery-1.11.1.min.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/jquery.MultiFile.js") %>"></script>
+
+    <link href="<%# Page.ResolveClientUrl("~/Content/toastr.css") %>" rel="stylesheet" />
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/toastr.min.js") %>"></script>
+    <%--  <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/Scripts/jquery.signalR-2.4.3.js") %>"></script>
+    <script type="text/javascript" src="<%# Page.ResolveClientUrl("~/signalr/hubs") %>"></script>--%>
+    <script>
+
+        $(document).ready(function () {
+            $(function () {
+                setInterval("heartBeat()", 1000 * 30); // 30s gửi request một lần
+
+                var proxy = $.connection.notificationHub;
+
+                proxy.client.notify = function (who, message) {
+                    toastr.options.positionClass = "toast-bottom-right";
+
+                    const args = message.split("|");
+                    let prefix = args[0];
+                    console.log(prefix);
+                    if (prefix == 'ERROR') {
+                        toastr.error(args[1]);
+                    }
+                    else if (prefix == 'WARN') {
+                        toastr.warning(args[1]);
+                    }
+                    else if (prefix == 'INFO') {
+                        toastr.info(args[1]);
+                    }
+                    else if (prefix == 'SUCCESS') {
+                        toastr.success(args[1]);
+                    }
+                    else {
+                        toastr.info(message);
+                    }
+                };
+
+                // Start the connection
+                $.connection.hub.start({ jsonp: true }).done(function () {
+                    //proxy.server.sendNotifications('Wellcome');
+                });
+
+            });
+        })
+
+        function heartBeat() {
+            console.log(new Date());
+            $.get("<%# Page.ResolveClientUrl("~/KeepAlive.aspx") %>", function (data) { });
+        }
+
+
+    </script>
+</head>
+<body class="<%= Utils.CurrentPageName %>">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <asp:ContentPlaceHolder ID="RootHolder" runat="server" />
+        <dx:ASPxLoadingPanel id="LoadingPanel" runat="server" clientinstancename="ClientLoadingPanel" modal="true" />
+        <dx:ASPxHiddenField id="HiddenField" runat="server" clientinstancename="ClientHiddenField" />
+    </form>
+</body>
+</html>

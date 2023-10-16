@@ -1,0 +1,68 @@
+[2023-03-12 14:12:34][Application_Error][   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.Execute(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.EntityCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.EntityCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunctionCommand(EntityCommand entityCommand)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass4b.<ExecuteFunction>b__4a()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass4b.<ExecuteFunction>b__49()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction(String functionName, ObjectParameter[] parameters)
+   at KTQTData.KTQTDataEntities.InitStoreDetail(Nullable`1 pStoreID, Nullable`1 pUserID) in E:\1.WORK\BAMBOO\App\KTQTData\KTQTDataModel.Context.cs:line 754
+   at Business_RevenueCost_RevenueCostForCompany.StoreDetailsGrid_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) in e:\1.WORK\BAMBOO\App\Website\Business\RevenueCost\RevenueCostForCompany.aspx.cs:line 646
+   at DevExpress.Web.ASPxGridView.RaiseCustomCallback(ASPxGridCustomCallbackEventArgs e)
+   at DevExpress.Web.ASPxGridBase.CBCustomCallBack(String[] args)
+   at DevExpress.Web.ASPxGridBase.DoCallBackPostBack(String eventArgument)
+   at DevExpress.Web.ASPxGridBase.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]
+[2023-03-12 14:13:10][Application_Error][   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.Execute(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.EntityCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.EntityCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunctionCommand(EntityCommand entityCommand)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass4b.<ExecuteFunction>b__4a()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass4b.<ExecuteFunction>b__49()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction(String functionName, ObjectParameter[] parameters)
+   at KTQTData.KTQTDataEntities.InitStoreDetail(Nullable`1 pStoreID, Nullable`1 pUserID) in E:\1.WORK\BAMBOO\App\KTQTData\KTQTDataModel.Context.cs:line 754
+   at Business_RevenueCost_RevenueCostForCompany.StoreDetailsGrid_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) in e:\1.WORK\BAMBOO\App\Website\Business\RevenueCost\RevenueCostForCompany.aspx.cs:line 646
+   at DevExpress.Web.ASPxGridView.RaiseCustomCallback(ASPxGridCustomCallbackEventArgs e)
+   at DevExpress.Web.ASPxGridBase.CBCustomCallBack(String[] args)
+   at DevExpress.Web.ASPxGridBase.DoCallBackPostBack(String eventArgument)
+   at DevExpress.Web.ASPxGridBase.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]
+[2023-03-12 14:16:17][Application_Error][   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.Execute(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.EntityCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.EntityCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunctionCommand(EntityCommand entityCommand)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass4b.<ExecuteFunction>b__4a()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass4b.<ExecuteFunction>b__49()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction(String functionName, ObjectParameter[] parameters)
+   at KTQTData.KTQTDataEntities.InitStoreDetail(Nullable`1 pStoreID, Nullable`1 pUserID) in E:\1.WORK\BAMBOO\App\KTQTData\KTQTDataModel.Context.cs:line 754
+   at Business_RevenueCost_RevenueCostForCompany.StoreDetailsGrid_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) in e:\1.WORK\BAMBOO\App\Website\Business\RevenueCost\RevenueCostForCompany.aspx.cs:line 646
+   at DevExpress.Web.ASPxGridView.RaiseCustomCallback(ASPxGridCustomCallbackEventArgs e)
+   at DevExpress.Web.ASPxGridBase.CBCustomCallBack(String[] args)
+   at DevExpress.Web.ASPxGridBase.DoCallBackPostBack(String eventArgument)
+   at DevExpress.Web.ASPxGridBase.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]
+[2023-03-12 14:34:43][Application_Error][   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.Execute(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.EntityCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.EntityCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunctionCommand(EntityCommand entityCommand)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass4b.<ExecuteFunction>b__4a()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass4b.<ExecuteFunction>b__49()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction(String functionName, ObjectParameter[] parameters)
+   at KTQTData.KTQTDataEntities.CalculateSumItem(Nullable`1 pVerCompanyID) in E:\1.WORK\BAMBOO\App\KTQTData\KTQTDataModel.Context.cs:line 601
+   at Business_RevenueCost_RevenueCostForCompany.StoresGrid_CustomCallback(Object sender, TreeListCustomCallbackEventArgs e) in e:\1.WORK\BAMBOO\App\Website\Business\RevenueCost\RevenueCostForCompany.aspx.cs:line 541
+   at DevExpress.Web.ASPxTreeList.ASPxTreeList.RaiseCustomCallback(TreeListCustomCallbackEventArgs e)
+   at DevExpress.Web.ASPxTreeList.Internal.TreeListCustomCallbackCommand.Execute()
+   at DevExpress.Web.ASPxTreeList.ASPxTreeList.RaisePostBackEventCore(String arg)
+   at DevExpress.Web.ASPxTreeList.ASPxTreeList.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]

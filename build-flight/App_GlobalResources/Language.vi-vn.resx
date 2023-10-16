@@ -1,0 +1,879 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="frmUser_colDescription" xml:space="preserve">
+    <value>Diễn giải</value>
+  </data>
+  <data name="frmUser_colPartnerCode" xml:space="preserve">
+    <value>Đối tác</value>
+  </data>
+  <data name="frmUser_colStartDate" xml:space="preserve">
+    <value>Ngày bắt đầu sử dụng</value>
+  </data>
+  <data name="frmUser_colUserName" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="frmFunction_colFileName" xml:space="preserve">
+    <value>Tên file</value>
+  </data>
+  <data name="frmFunction_colNameEN" xml:space="preserve">
+    <value>Tên chức năng (EN)</value>
+  </data>
+  <data name="frmFunction_colNameVN" xml:space="preserve">
+    <value>Tên chức năng (VN)</value>
+  </data>
+  <data name="frmFunction_colSeq" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Làm mới</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="frmFunction_colImagePath" xml:space="preserve">
+    <value>Tên ảnh</value>
+  </data>
+  <data name="frmFunction_colName" xml:space="preserve">
+    <value>Tên chức năng</value>
+  </data>
+  <data name="frm_Active" xml:space="preserve">
+    <value>Hiệu lực?</value>
+  </data>
+  <data name="frmFunction_colParent" xml:space="preserve">
+    <value>Chức năng cha</value>
+  </data>
+  <data name="frmFunction_colImage" xml:space="preserve">
+    <value>Ảnh</value>
+  </data>
+  <data name="frmPartner_colCode" xml:space="preserve">
+    <value>Mã đối tác</value>
+  </data>
+  <data name="frmPartner_colName" xml:space="preserve">
+    <value>Tên đối tác</value>
+  </data>
+  <data name="frmPartner_colType" xml:space="preserve">
+    <value>Loại đối tác</value>
+  </data>
+  <data name="frmFromDate" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="frmToDate" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="frmRateType_colCode" xml:space="preserve">
+    <value>Mã loại giá</value>
+  </data>
+  <data name="frmRateType_colName" xml:space="preserve">
+    <value>Tên loại giá</value>
+  </data>
+  <data name="frm_Description" xml:space="preserve">
+    <value>Diễn giải</value>
+  </data>
+  <data name="frmRate_colCode" xml:space="preserve">
+    <value>Mã giá</value>
+  </data>
+  <data name="frmRate_colContract" xml:space="preserve">
+    <value>Số hợp đồng</value>
+  </data>
+  <data name="frmRate_colRate" xml:space="preserve">
+    <value>Giá</value>
+  </data>
+  <data name="frmRateType" xml:space="preserve">
+    <value>Loại giá</value>
+  </data>
+  <data name="frm_Effective" xml:space="preserve">
+    <value>Hiệu lực</value>
+  </data>
+  <data name="frmPromotionRate" xml:space="preserve">
+    <value>Giá khuyến mại</value>
+  </data>
+  <data name="frmPromotionRate_colCode" xml:space="preserve">
+    <value>Mã giá khuyến mại</value>
+  </data>
+  <data name="frmAvaiableMile" xml:space="preserve">
+    <value>Số dặm</value>
+  </data>
+  <data name="frmAvaiableMile_colTotal" xml:space="preserve">
+    <value>Tổng số dặm</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>Tìm</value>
+  </data>
+  <data name="frmChangePassword_btnChangePassword" xml:space="preserve">
+    <value>Thay đổi mật khẩu</value>
+  </data>
+  <data name="frmChangePassword_ConfirmPassword" xml:space="preserve">
+    <value>Xác nhận mật khẩu:</value>
+  </data>
+  <data name="frmChangePassword_Message1" xml:space="preserve">
+    <value>Sử dụng form nhập bên dưới để thay đổi mật khẩu.</value>
+  </data>
+  <data name="frmChangePassword_Message2" xml:space="preserve">
+    <value>Mật khẩu mới yêu cầu có ít nhất từ 6 ký tự trở lên.</value>
+  </data>
+  <data name="frmChangePassword_OldPassword" xml:space="preserve">
+    <value>Mật khẩu cũ:</value>
+  </data>
+  <data name="frmChangePassword_Password" xml:space="preserve">
+    <value>Mật khẩu mới:</value>
+  </data>
+  <data name="frmChangePassword_Title" xml:space="preserve">
+    <value>THAY ĐỔI MẬT KHẨU</value>
+  </data>
+  <data name="frmFunction_colActive" xml:space="preserve">
+    <value>Sử dụng</value>
+  </data>
+  <data name="frmGroupUserEdit_Caption" xml:space="preserve">
+    <value>Cập nhật nhóm người dùng</value>
+  </data>
+  <data name="frmGroupUser_AvaiableUser" xml:space="preserve">
+    <value>Người dùng chưa tham gia</value>
+  </data>
+  <data name="frmGroupUser_btnApply" xml:space="preserve">
+    <value>Chấp nhận</value>
+  </data>
+  <data name="frmGroupUser_ChosenUser" xml:space="preserve">
+    <value>Người dùng đã tham gia</value>
+  </data>
+  <data name="frmGroupUser_colDescription" xml:space="preserve">
+    <value>Diễn giải</value>
+  </data>
+  <data name="frmGroupUser_colGroupName" xml:space="preserve">
+    <value>Tên nhóm</value>
+  </data>
+  <data name="frmGroupUser_colGroupNumber" xml:space="preserve">
+    <value>Mã nhóm</value>
+  </data>
+  <data name="frmGroupUser_colIsLocked" xml:space="preserve">
+    <value>Khóa</value>
+  </data>
+  <data name="frmGroupUser_colIsSystem" xml:space="preserve">
+    <value>Nhóm hệ thống</value>
+  </data>
+  <data name="frmGroupUser_Title" xml:space="preserve">
+    <value>KHAI BÁO NHÓM NGƯỜI DÙNG</value>
+  </data>
+  <data name="frmPartner_TabAvaiableMile" xml:space="preserve">
+    <value>Đối tác mua dặm gói lớn</value>
+  </data>
+  <data name="frmPartner_TabCardType" xml:space="preserve">
+    <value>Loại thẻ đồng thương hiệu</value>
+  </data>
+  <data name="frmPartner_TabOption" xml:space="preserve">
+    <value>Thay đổi thứ tự kiểm tra dữ liệu</value>
+  </data>
+  <data name="frmPartner_TabPromotionRate" xml:space="preserve">
+    <value>Đơn giá khuyến mại</value>
+  </data>
+  <data name="frmPartner_TabRate" xml:space="preserve">
+    <value>Đơn giá cơ bản</value>
+  </data>
+  <data name="frmPartner_Title" xml:space="preserve">
+    <value>KHAI BÁO ĐỐI TÁC VÀ THIẾT LẬP THÔNG SỐ</value>
+  </data>
+  <data name="frmUserEdit_Address" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="frmUserEdit_Authorization" xml:space="preserve">
+    <value>Thẩm quyền</value>
+  </data>
+  <data name="frmUserEdit_ChangePasswordAtNextLogin" xml:space="preserve">
+    <value>Thay đổi MK lần đăng nhập tiếp theo</value>
+  </data>
+  <data name="frmUserEdit_Country" xml:space="preserve">
+    <value>Quốc gia</value>
+  </data>
+  <data name="frmUserEdit_Description" xml:space="preserve">
+    <value>Diễn giải</value>
+  </data>
+  <data name="frmUserEdit_Email" xml:space="preserve">
+    <value>Thư điện tử</value>
+  </data>
+  <data name="frmUserEdit_ExpiryDate" xml:space="preserve">
+    <value>Hiệu lực đến</value>
+  </data>
+  <data name="frmUserEdit_Gender" xml:space="preserve">
+    <value>Giới tính</value>
+  </data>
+  <data name="frmUserEdit_GenderFemale" xml:space="preserve">
+    <value>Nữ</value>
+  </data>
+  <data name="frmUserEdit_GenderMale" xml:space="preserve">
+    <value>Nam</value>
+  </data>
+  <data name="frmUserEdit_IsLocked" xml:space="preserve">
+    <value>Khóa</value>
+  </data>
+  <data name="frmUserEdit_Mobile" xml:space="preserve">
+    <value>Số di động</value>
+  </data>
+  <data name="frmUserEdit_Name" xml:space="preserve">
+    <value>Họ, tên</value>
+  </data>
+  <data name="frmUserEdit_Partner" xml:space="preserve">
+    <value>Đối tác</value>
+  </data>
+  <data name="frmUserEdit_Password" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="frmUserEdit_Registration" xml:space="preserve">
+    <value>Đăng ký</value>
+  </data>
+  <data name="frmUserEdit_StartDate" xml:space="preserve">
+    <value>Hiệu lực từ</value>
+  </data>
+  <data name="frmUserEdit_Telephone" xml:space="preserve">
+    <value>Số điện thoại</value>
+  </data>
+  <data name="frmUserEdit_UserName" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="frmUser_AvaiableGroup" xml:space="preserve">
+    <value>Nhóm chưa tham gia</value>
+  </data>
+  <data name="frmUser_ChosenGroup" xml:space="preserve">
+    <value>Nhóm đã tham gia</value>
+  </data>
+  <data name="frmUser_colChangePass" xml:space="preserve">
+    <value>Thay đổi MK lần đăng nhập sau</value>
+  </data>
+  <data name="frmUser_colExpiryDate" xml:space="preserve">
+    <value>Ngày hết hạn</value>
+  </data>
+  <data name="frmUser_colIsLocked" xml:space="preserve">
+    <value>Khóa</value>
+  </data>
+  <data name="frmUser_colIsSystem" xml:space="preserve">
+    <value>Người dùng hệ thống</value>
+  </data>
+  <data name="frmUser_Title" xml:space="preserve">
+    <value>KHAI BÁO NGƯỜI DÙNG</value>
+  </data>
+  <data name="gridPartner_colDescription" xml:space="preserve">
+    <value>Diễn giải</value>
+  </data>
+  <data name="gridPartner_colEndDate" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="gridPartner_colFromDate" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="gridPartner_colLanguage" xml:space="preserve">
+    <value>Ngôn ngữ</value>
+  </data>
+  <data name="gridPartner_colMileType" xml:space="preserve">
+    <value>Loại</value>
+  </data>
+  <data name="gridPartner_colPartnerCode" xml:space="preserve">
+    <value>Mã ĐT</value>
+  </data>
+  <data name="gridPartner_colPartnerName" xml:space="preserve">
+    <value>Tên đối tác</value>
+  </data>
+  <data name="gridPartner_colPromCode" xml:space="preserve">
+    <value>Mã KM</value>
+  </data>
+  <data name="gridPartner_colReviewMode" xml:space="preserve">
+    <value>Chế độ xem trước</value>
+  </data>
+  <data name="Master_EditUserProfile" xml:space="preserve">
+    <value>Cập nhật thông tin</value>
+  </data>
+  <data name="Master_LogOut" xml:space="preserve">
+    <value>Thoát</value>
+  </data>
+  <data name="Master_Welcome" xml:space="preserve">
+    <value>Chào mừng</value>
+  </data>
+  <data name="frmUpload_BrowseFile" xml:space="preserve">
+    <value>Tìm File</value>
+  </data>
+  <data name="frmUpload_BrowserText" xml:space="preserve">
+    <value>Tìm</value>
+  </data>
+  <data name="frmUpload_btnApprove" xml:space="preserve">
+    <value>Duyệt</value>
+  </data>
+  <data name="frmUpload_btnCanceChanges" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="frmUpload_btnReview" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="frmUpload_btnSaveChanges" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="frmUpload_btnUpload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="frmUpload_btnValidate" xml:space="preserve">
+    <value>Kiểm tra</value>
+  </data>
+  <data name="frmUpload_DataUploaded" xml:space="preserve">
+    <value>Dữ liệu chi tiết</value>
+  </data>
+  <data name="frmUpload_gridDataUploaded_colAmount" xml:space="preserve">
+    <value>Số dặm (Đêm nghỉ)</value>
+  </data>
+  <data name="frmUpload_gridDataUploaded_colFirstName" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="frmUpload_gridDataUploaded_colGlpNumber" xml:space="preserve">
+    <value>Số thẻ HV</value>
+  </data>
+  <data name="frmUpload_gridDataUploaded_colLineNumber" xml:space="preserve">
+    <value>Dòng</value>
+  </data>
+  <data name="frmUpload_gridDataUploaded_colPartnerCode" xml:space="preserve">
+    <value>Đối tác</value>
+  </data>
+  <data name="frmUpload_gridDataUploaded_colSurname" xml:space="preserve">
+    <value>Họ</value>
+  </data>
+  <data name="frmUpload_gridDataUploaded_colTransactionDate" xml:space="preserve">
+    <value>Ngày giao dịch</value>
+  </data>
+  <data name="frmUpload_gridUploadHis_colEndTime" xml:space="preserve">
+    <value>T.g Kết thúc</value>
+  </data>
+  <data name="frmUpload_gridUploadHis_colFileName" xml:space="preserve">
+    <value>Diễn giải</value>
+  </data>
+  <data name="frmUpload_gridUploadHis_colFilesize" xml:space="preserve">
+    <value>Dung lượng File</value>
+  </data>
+  <data name="frmUpload_gridUploadHis_colStartTime" xml:space="preserve">
+    <value>T.g Upload</value>
+  </data>
+  <data name="frmUpload_gridUploadHis_colTotalMember" xml:space="preserve">
+    <value>Số HV</value>
+  </data>
+  <data name="frmUpload_gridUploadHis_colTotalRecord" xml:space="preserve">
+    <value>Số dòng</value>
+  </data>
+  <data name="frmUpload_gridUploadHis_colUlStatus" xml:space="preserve">
+    <value>Trạng thái Upload</value>
+  </data>
+  <data name="frmUpload_Language" xml:space="preserve">
+    <value>Ngôn ngữ</value>
+  </data>
+  <data name="frmUpload_PartnerInformation" xml:space="preserve">
+    <value>Thông tin</value>
+  </data>
+  <data name="frmUpload_TabPageHistory" xml:space="preserve">
+    <value>Dữ liệu lịch sử</value>
+  </data>
+  <data name="frmUpload_UploadFile" xml:space="preserve">
+    <value>Upload File</value>
+  </data>
+  <data name="gridAvaiableMile_colAvaiableMile" xml:space="preserve">
+    <value>Dặm còn lại</value>
+  </data>
+  <data name="gridAvaiableMile_colTotalMile" xml:space="preserve">
+    <value>Tổng dặm</value>
+  </data>
+  <data name="gridCardType_colCardType" xml:space="preserve">
+    <value>Loại thẻ</value>
+  </data>
+  <data name="gridCardType_colIssuingFee" xml:space="preserve">
+    <value>Phí phát hành</value>
+  </data>
+  <data name="gridOption_colOptionCode" xml:space="preserve">
+    <value>Mã</value>
+  </data>
+  <data name="gridOption_colOptionValue" xml:space="preserve">
+    <value>Bật/Tắt</value>
+  </data>
+  <data name="gridOption_colSeq" xml:space="preserve">
+    <value>Thứ tự</value>
+  </data>
+  <data name="gridOption_colWarnStatus" xml:space="preserve">
+    <value>Cấp độ lỗi</value>
+  </data>
+  <data name="gridOption_Down" xml:space="preserve">
+    <value>Xuống</value>
+  </data>
+  <data name="gridOption_Up" xml:space="preserve">
+    <value>Lên</value>
+  </data>
+  <data name="gridRate_colContractNumber" xml:space="preserve">
+    <value>Số hợp đồng</value>
+  </data>
+  <data name="gridRate_colPromotionRate" xml:space="preserve">
+    <value>Đơn giá</value>
+  </data>
+  <data name="gridRate_colPromotionRateCode" xml:space="preserve">
+    <value>Mã đơn giá KM</value>
+  </data>
+  <data name="gridRate_colRate" xml:space="preserve">
+    <value>Đơn giá</value>
+  </data>
+  <data name="gridRate_colRateCode" xml:space="preserve">
+    <value>Mã đơn giá</value>
+  </data>
+  <data name="frmLogin_Password" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="frmLogin_SignIn" xml:space="preserve">
+    <value>Đăng nhập</value>
+  </data>
+  <data name="frmLogin_Title" xml:space="preserve">
+    <value>HỆ THỐNG NON-AIR</value>
+  </data>
+  <data name="frmLogin_UserName" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="DateFormatString" xml:space="preserve">
+    <value>dd/MM/yyyy</value>
+  </data>
+  <data name="DateTimeFormatString" xml:space="preserve">
+    <value>dd/MM/yyyy HH:mm:ss</value>
+  </data>
+  <data name="gridPartner_colMileageAllowed" xml:space="preserve">
+    <value>Số dặm giới hạn của HV(năm)</value>
+  </data>
+  <data name="gridPartner_colTrxDateOption" xml:space="preserve">
+    <value>Điều kiện ngày GD</value>
+  </data>
+  <data name="frmUpload_btnManualInput" xml:space="preserve">
+    <value>Nhập thủ công</value>
+  </data>
+  <data name="frm_CreateDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="frm_CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
+  </data>
+  <data name="MoveToLeft" xml:space="preserve">
+    <value>&lt; Gỡ bỏ</value>
+  </data>
+  <data name="MoveToRight" xml:space="preserve">
+    <value>Thêm &gt;</value>
+  </data>
+  <data name="SesstionTimeoutMessage" xml:space="preserve">
+    <value>Cảnh báo: Trong vòng 3 phút tiếp theo, nếu bạn không tiếp tục sử dụng, phiên làm việc của bạn sẽ kết thúc và sẽ tự động chuyển trang về trang đăng nhập. Vui lòng lưu lại dữ liệu đã nhập.</value>
+  </data>
+  <data name="frmUserEdit_ConfirmPassword" xml:space="preserve">
+    <value>Xác nhận MK</value>
+  </data>
+  <data name="frmUserProfile_EffectiveDateFrom" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="frmUserProfile_EffectiveDateTo" xml:space="preserve">
+    <value>Đến:</value>
+  </data>
+  <data name="frmUserProfile_Language" xml:space="preserve">
+    <value>Ngôn ngữ</value>
+  </data>
+  <data name="frmUserProfile_Partner" xml:space="preserve">
+    <value>Đối tác</value>
+  </data>
+  <data name="frmUserProfile_PartnerInfor" xml:space="preserve">
+    <value>Thông tin đối tác</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Chấp nhận</value>
+  </data>
+  <data name="ChangeLanguage" xml:space="preserve">
+    <value>Thay đổi ngôn ngữ</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>Tiếng Anh</value>
+  </data>
+  <data name="ManualInput" xml:space="preserve">
+    <value>Nhập thủ công</value>
+  </data>
+  <data name="Vietnamese" xml:space="preserve">
+    <value>Tiếng Việt</value>
+  </data>
+  <data name="btnBack" xml:space="preserve">
+    <value>Trở về</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Xuất dữ liệu</value>
+  </data>
+  <data name="ExportFormat" xml:space="preserve">
+    <value>Định dạng</value>
+  </data>
+  <data name="Row_Number" xml:space="preserve">
+    <value>TT</value>
+  </data>
+  <data name="ErrorDetailsPopup" xml:space="preserve">
+    <value>Chi tiết lỗi</value>
+  </data>
+  <data name="Error_Status" xml:space="preserve">
+    <value>Tình trạng</value>
+  </data>
+  <data name="frmUpload_gridUploadHis_colApproved" xml:space="preserve">
+    <value>Đã duyệt</value>
+  </data>
+  <data name="frmUpload_gridUploadHis_colIsValidData" xml:space="preserve">
+    <value>Kiểm tra</value>
+  </data>
+  <data name="frmUpload_gridUploadHis_colTransfered" xml:space="preserve">
+    <value>Đã xử lý(đổ vào CLS)</value>
+  </data>
+  <data name="gridErrors_Col" xml:space="preserve">
+    <value>Cột</value>
+  </data>
+  <data name="gridErrors_ErrorCode" xml:space="preserve">
+    <value>Mã lỗi</value>
+  </data>
+  <data name="gridErrors_ErrorText" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="gridErrors_Line" xml:space="preserve">
+    <value>Dòng</value>
+  </data>
+  <data name="gridErrors_Status" xml:space="preserve">
+    <value>Tình trạng</value>
+  </data>
+  <data name="Show_Errors" xml:space="preserve">
+    <value>Xem lỗi...</value>
+  </data>
+  <data name="frmRoles_Title" xml:space="preserve">
+    <value>KHAI BÁO QUYỀN</value>
+  </data>
+  <data name="frmManual_gridUploadHis_colEndTime" xml:space="preserve">
+    <value>T.g Kết thúc</value>
+  </data>
+  <data name="frmManual_gridUploadHis_colStartTime" xml:space="preserve">
+    <value>T.g Bắt đầu</value>
+  </data>
+  <data name="frmManual_gridUploadHis_colUlStatus" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="frmRoles_Description" xml:space="preserve">
+    <value>Diễn giải</value>
+  </data>
+  <data name="frmRoles_RoleName" xml:space="preserve">
+    <value>Tên quyền</value>
+  </data>
+  <data name="btnAddRoleToUser" xml:space="preserve">
+    <value>Thêm quyền</value>
+  </data>
+  <data name="frmRoles_Roles" xml:space="preserve">
+    <value>Quyền</value>
+  </data>
+  <data name="gridPartner_colEmailAccrualFile" xml:space="preserve">
+    <value>Gửi mail cộng dặm</value>
+  </data>
+  <data name="gridPartner_colEmailBilling" xml:space="preserve">
+    <value>Gửi billing qua email</value>
+  </data>
+  <data name="gridPartner_colRemindUploadFile" xml:space="preserve">
+    <value>Nhắc Upload File</value>
+  </data>
+  <data name="Balance_Sheet_Partner_Code" xml:space="preserve">
+    <value>Mã đối tác</value>
+  </data>
+  <data name="Balance_Sheet_Partner_Name" xml:space="preserve">
+    <value>Tên đối tác</value>
+  </data>
+  <data name="Balance_Sheet_Quarter" xml:space="preserve">
+    <value>Quý</value>
+  </data>
+  <data name="Balance_Sheet_Year" xml:space="preserve">
+    <value>Năm</value>
+  </data>
+  <data name="Button_View_Report" xml:space="preserve">
+    <value>Xem báo cáo</value>
+  </data>
+  <data name="Report_Parameter_Caption" xml:space="preserve">
+    <value>Tham số báo cáo</value>
+  </data>
+  <data name="Report_Parameter_Partner" xml:space="preserve">
+    <value>Đối tác</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Đóng</value>
+  </data>
+  <data name="From_Date" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="Preview_Report_Caption" xml:space="preserve">
+    <value>Xem báo cáo</value>
+  </data>
+  <data name="Quarter" xml:space="preserve">
+    <value>Quý</value>
+  </data>
+  <data name="To_Date" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Năm</value>
+  </data>
+  <data name="frmTemplate_colContent" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="frmTemplate_colSubject" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="frmTemplate_colType" xml:space="preserve">
+    <value>Loại mail</value>
+  </data>
+  <data name="frmTemplate_Tittle" xml:space="preserve">
+    <value>Mẫu Mail</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Tháng</value>
+  </data>
+  <data name="gridRate_colRateUSD" xml:space="preserve">
+    <value>Đơn giá USD</value>
+  </data>
+  <data name="gridRate_colRateVN" xml:space="preserve">
+    <value>Đơn giá</value>
+  </data>
+  <data name="gridRate_colPromotionRateUSD" xml:space="preserve">
+    <value>Đơn giá KM USD</value>
+  </data>
+  <data name="gridRate_colPromotionRateVND" xml:space="preserve">
+    <value>Đơn giá KM</value>
+  </data>
+  <data name="File_Categories" xml:space="preserve">
+    <value>Loại file</value>
+  </data>
+  <data name="Email_Address" xml:space="preserve">
+    <value>Địa chỉ Email</value>
+  </data>
+  <data name="SendMail" xml:space="preserve">
+    <value>Gửi Mail</value>
+  </data>
+  <data name="frmTimeUpload_colDayInType" xml:space="preserve">
+    <value>Ngày</value>
+  </data>
+  <data name="frmTimeUpload_colType" xml:space="preserve">
+    <value>Loại</value>
+  </data>
+  <data name="frmTemplate_colDay" xml:space="preserve">
+    <value>Ngày</value>
+  </data>
+  <data name="frmTemplate_colHour" xml:space="preserve">
+    <value>Giờ</value>
+  </data>
+  <data name="frmTemplate_colMonth" xml:space="preserve">
+    <value>Tháng</value>
+  </data>
+  <data name="frmTimeUpload_colDay" xml:space="preserve">
+    <value>Ngày</value>
+  </data>
+  <data name="frmTimeUpload_colHour" xml:space="preserve">
+    <value>Giờ</value>
+  </data>
+  <data name="frmTimeUpload_colMonth" xml:space="preserve">
+    <value>Tháng</value>
+  </data>
+  <data name="frmControlMiles_amount" xml:space="preserve">
+    <value>Số dặm</value>
+  </data>
+  <data name="frmControlMiles_CreditingDate" xml:space="preserve">
+    <value>Ngày cộng dặm</value>
+  </data>
+  <data name="frmControlMiles_resources" xml:space="preserve">
+    <value>Loại cộng</value>
+  </data>
+  <data name="frmControlMiles_state" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="frmUpload_gridUploadHis_colTotalHold" xml:space="preserve">
+    <value>Đang treo</value>
+  </data>
+  <data name="frmUpload_gridUploadHis_colTotalProcessed" xml:space="preserve">
+    <value>Được duyệt</value>
+  </data>
+  <data name="frmRoe_currency" xml:space="preserve">
+    <value>Loại tiền</value>
+  </data>
+  <data name="frmRoe_Roe" xml:space="preserve">
+    <value>Tỷ giá</value>
+  </data>
+  <data name="frmUpload_gridUploadHis_colCreateTime" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="btn_RemoveAll" xml:space="preserve">
+    <value>Bỏ hết</value>
+  </data>
+  <data name="btn_SelectAll" xml:space="preserve">
+    <value>Chọn hết</value>
+  </data>
+  <data name="frmPartner_Partner" xml:space="preserve">
+    <value>Đối tác</value>
+  </data>
+  <data name="frmTemplate_colTemplateCode" xml:space="preserve">
+    <value>Mã mẫu</value>
+  </data>
+  <data name="gridPartner_colMonthAllowed" xml:space="preserve">
+    <value>Số dặm giới hạn của HV(tháng)</value>
+  </data>
+  <data name="LotusMilesNumber" xml:space="preserve">
+    <value>Số thẻ HV</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>Tham số tìm kiếm</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Tìm</value>
+  </data>
+  <data name="frmUpload_gridDataUploaded_colInvoiceNo" xml:space="preserve">
+    <value>Số tiền</value>
+  </data>
+  <data name="frmUpload_gridDataUploaded_colPassValidate" xml:space="preserve">
+    <value>Đã KT</value>
+  </data>
+  <data name="frmUpload_gridUploadHis_colAccrualMonth" xml:space="preserve">
+    <value>Tháng (MM/yyyy)</value>
+  </data>
+  <data name="GLP_Name" xml:space="preserve">
+    <value>Tên hội viên</value>
+  </data>
+  <data name="Rate_Type" xml:space="preserve">
+    <value>Đơn giá</value>
+  </data>
+  <data name="Rate_Type_Basic" xml:space="preserve">
+    <value>Basic</value>
+  </data>
+  <data name="Rate_Type_Promotion" xml:space="preserve">
+    <value>Promotion</value>
+  </data>
+  <data name="btnConfirmDataOk" xml:space="preserve">
+    <value>Xác nhận đã kiểm tra</value>
+  </data>
+  <data name="Test_Mail" xml:space="preserve">
+    <value>Kiểm tra</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Sử dụng</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+</root>

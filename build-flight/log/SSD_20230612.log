@@ -1,0 +1,36 @@
+[2023-06-12 14:45:53][Application_Error][   at Imports_ImportQuantiy.DataHistoryGrid_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) in e:\1.WORK\BAMBOO\App\Website\Imports\ImportQuantiy.aspx.cs:line 358
+   at DevExpress.Web.ASPxGridView.RaiseCustomCallback(ASPxGridCustomCallbackEventArgs e)
+   at DevExpress.Web.ASPxGridBase.CBCustomCallBack(String[] args)
+   at DevExpress.Web.ASPxGridBase.DoCallBackPostBack(String eventArgument)
+   at DevExpress.Web.ASPxGridBase.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]
+[2023-06-12 14:45:53][Application_Error][   at Imports_ImportQuantiy.DataHistoryGrid_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) in e:\1.WORK\BAMBOO\App\Website\Imports\ImportQuantiy.aspx.cs:line 358
+   at DevExpress.Web.ASPxGridView.RaiseCustomCallback(ASPxGridCustomCallbackEventArgs e)
+   at DevExpress.Web.ASPxGridBase.CBCustomCallBack(String[] args)
+   at DevExpress.Web.ASPxGridBase.DoCallBackPostBack(String eventArgument)
+   at DevExpress.Web.ASPxGridBase.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]
+[2023-06-12 14:46:11][Application_Error][   at Imports_ImportQuantiy.DataHistoryGrid_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) in e:\1.WORK\BAMBOO\App\Website\Imports\ImportQuantiy.aspx.cs:line 358
+   at DevExpress.Web.ASPxGridView.RaiseCustomCallback(ASPxGridCustomCallbackEventArgs e)
+   at DevExpress.Web.ASPxGridBase.CBCustomCallBack(String[] args)
+   at DevExpress.Web.ASPxGridBase.DoCallBackPostBack(String eventArgument)
+   at DevExpress.Web.ASPxGridBase.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]
+[2023-06-12 14:46:11][Application_Error][   at Imports_ImportQuantiy.DataHistoryGrid_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) in e:\1.WORK\BAMBOO\App\Website\Imports\ImportQuantiy.aspx.cs:line 358
+   at DevExpress.Web.ASPxGridView.RaiseCustomCallback(ASPxGridCustomCallbackEventArgs e)
+   at DevExpress.Web.ASPxGridBase.CBCustomCallBack(String[] args)
+   at DevExpress.Web.ASPxGridBase.DoCallBackPostBack(String eventArgument)
+   at DevExpress.Web.ASPxGridBase.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]
+[2023-06-12 15:05:13][Application_Error][   at Imports_ImportQuantiy.DataHistoryGrid_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) in e:\1.WORK\BAMBOO\App\Website\Imports\ImportQuantiy.aspx.cs:line 358
+   at DevExpress.Web.ASPxGridView.RaiseCustomCallback(ASPxGridCustomCallbackEventArgs e)
+   at DevExpress.Web.ASPxGridBase.CBCustomCallBack(String[] args)
+   at DevExpress.Web.ASPxGridBase.DoCallBackPostBack(String eventArgument)
+   at DevExpress.Web.ASPxGridBase.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]
+[2023-06-12 15:05:13][Application_Error][   at Imports_ImportQuantiy.DataHistoryGrid_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) in e:\1.WORK\BAMBOO\App\Website\Imports\ImportQuantiy.aspx.cs:line 358
+   at DevExpress.Web.ASPxGridView.RaiseCustomCallback(ASPxGridCustomCallbackEventArgs e)
+   at DevExpress.Web.ASPxGridBase.CBCustomCallBack(String[] args)
+   at DevExpress.Web.ASPxGridBase.DoCallBackPostBack(String eventArgument)
+   at DevExpress.Web.ASPxGridBase.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]

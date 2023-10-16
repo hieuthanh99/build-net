@@ -1,0 +1,34 @@
+[2023-05-18 11:40:21][Application_Error][   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.Execute(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.EntityCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.EntityCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunctionCommand(EntityCommand entityCommand)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass4b.<ExecuteFunction>b__4a()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass4b.<ExecuteFunction>b__49()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction(String functionName, ObjectParameter[] parameters)
+   at KTQTData.KTQTDataEntities.GenerateCostUnit(Nullable`1 pAutoPricingID, Nullable`1 pUserID) in E:\1.WORK\BAMBOO\App\KTQTData\KTQTDataModel.Context.cs:line 2514
+   at Business_RevenueCost_AutoPricing.AutoPricingGrid_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) in e:\1.WORK\BAMBOO\App\Website\Business\RevenueCost\AutoPricing.aspx.cs:line 177
+   at DevExpress.Web.ASPxGridView.RaiseCustomCallback(ASPxGridCustomCallbackEventArgs e)
+   at DevExpress.Web.ASPxGridBase.CBCustomCallBack(String[] args)
+   at DevExpress.Web.ASPxGridBase.DoCallBackPostBack(String eventArgument)
+   at DevExpress.Web.ASPxGridBase.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]
+[2023-05-18 13:18:56][Application_Error][   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.Execute(EntityCommand entityCommand, CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.EntityCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Entity.Core.EntityClient.EntityCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunctionCommand(EntityCommand entityCommand)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass4b.<ExecuteFunction>b__4a()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass4b.<ExecuteFunction>b__49()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction(String functionName, ObjectParameter[] parameters)
+   at KTQTData.KTQTDataEntities.GenerateCostUnit(Nullable`1 pAutoPricingID, Nullable`1 pUserID) in E:\1.WORK\BAMBOO\App\KTQTData\KTQTDataModel.Context.cs:line 2514
+   at Business_RevenueCost_AutoPricing.AutoPricingGrid_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) in e:\1.WORK\BAMBOO\App\Website\Business\RevenueCost\AutoPricing.aspx.cs:line 177
+   at DevExpress.Web.ASPxGridView.RaiseCustomCallback(ASPxGridCustomCallbackEventArgs e)
+   at DevExpress.Web.ASPxGridBase.CBCustomCallBack(String[] args)
+   at DevExpress.Web.ASPxGridBase.DoCallBackPostBack(String eventArgument)
+   at DevExpress.Web.ASPxGridBase.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]

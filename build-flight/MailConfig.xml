@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MailConfigInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ServerPop>pop.vietnamairlines.com</ServerPop>
+  <ServerSmtp>smtp.vietnamairlines.com</ServerSmtp>
+  <UserEmail>helpdesk.pmd@vietnamairlines.com</UserEmail>
+  <Password>rdowdS7eIJ/VUAogZMmW3ginT53zzy0fD8orymvoOruSR1BNASBXT/vaYufkpIE+MKr8OvCsYyTAP77hFw6OOH9ZDbTBFLSZjmaQfG8PqIAHeTDk2zXjE1kxVBEe+64C</Password>
+  <SmtpPort>587</SmtpPort>
+  <Pop3Port>995</Pop3Port>
+</MailConfigInfo>

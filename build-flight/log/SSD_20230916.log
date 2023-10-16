@@ -1,0 +1,6 @@
+[2023-09-16 14:32:53][Application_Error][   at Admin_Function.treeListMenu_CustomCallback(Object sender, TreeListCustomCallbackEventArgs e) in e:\1.WORK\VNA\App\Website\Admin\Function.aspx.cs:line 227
+   at DevExpress.Web.ASPxTreeList.ASPxTreeList.RaiseCustomCallback(TreeListCustomCallbackEventArgs e)
+   at DevExpress.Web.ASPxTreeList.Internal.TreeListCustomCallbackCommand.Execute()
+   at DevExpress.Web.ASPxTreeList.ASPxTreeList.RaisePostBackEventCore(String arg)
+   at DevExpress.Web.ASPxTreeList.ASPxTreeList.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]

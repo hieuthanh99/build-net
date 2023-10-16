@@ -1,0 +1,227 @@
+﻿#LayoutSplitter .HeadPane,
+#PrintLayoutSplitter .HeadPane
+{
+	/*background: #00484d url("HeaderBack.jpg") no-repeat left top;*/
+    background: #00a9c4 no-repeat left top;
+}
+
+.mail #LayoutSplitter .RightPane.HeadPane,
+.contacts #LayoutSplitter .RightPane.HeadPane,
+.feeds #LayoutSplitter .RightPane.HeadPane 
+{
+    background-position: -250px 0;
+}
+
+.calendar #LayoutSplitter .RightPane.HeadPane 
+{
+    background-position: -300px 0;
+}
+
+.calendar #LayoutSplitter .SidePane,
+.contacts #LayoutSplitter .SidePane,
+.feeds #LayoutSplitter .SidePane
+{
+	background: #edf3f4;
+}
+
+.CalendarNavArea
+{
+	background: #edf3f4;
+}
+
+.HeadPane .ActionToolbar .Spacer b
+{
+    background: #7eacb1;
+}
+
+#LayoutSplitter .HeadPane .NavigationToolbar .NavigationMenu .dxm-item .dxm-content,
+#LayoutSplitter .HeadPane .NavigationToolbar .NavigationMenu .dxm-item.dxm-hovered .dxm-content
+{
+    color: #40758d !important;
+}
+
+#LayoutSplitter .HeadPane .ActionToolbar .ActionMenu .dxm-item,
+#LayoutSplitter .HeadPane .ActionToolbar .InfoMenu .dxm-item
+{
+    background: transparent;
+}
+#LayoutSplitter .HeadPane .ActionToolbar .ActionMenu .dxm-item.dxm-hovered,
+#LayoutSplitter .HeadPane .ActionToolbar .InfoMenu .dxm-item.dxm-hovered
+{
+    background: #7eacb1;
+}
+
+.HeadPane .ActionToolbar .SearchBox
+{
+    margin-top: 3px;
+}
+
+.ContactCard 
+{
+    border: 1px solid #7eacb1;
+}
+.contacts .dxdvContent_Glass
+{
+    padding: 5px;
+}
+
+.dxm-image-l span.dx-vam {
+    color: #ffffff;
+}
+
+dxm-gutter span.dx-vam {
+    color: #000000;
+}
+
+/*********************************TuyenDV: ADD NEW CSS****************************************/
+.dxigControl_Moderno.dxTouchUI .dxWeb_igCloseButton_Moderno, .dxigControl_Moderno.dxTouchUI .dxWeb_igPauseButton_Moderno, .dxigControl_Moderno.dxTouchUI .dxWeb_igPlayButton_Moderno, .dxm-hovered .dxWeb_fmCopyButton_Moderno, .dxm-hovered .dxWeb_fmCreateButton_Moderno, .dxm-hovered .dxWeb_fmDeleteButton_Moderno, .dxm-hovered .dxWeb_fmDwnlButton_Moderno, .dxm-hovered .dxWeb_fmMoveButton_Moderno, .dxm-hovered .dxWeb_fmRefreshButton_Moderno, .dxm-hovered .dxWeb_fmRenameButton_Moderno, .dxm-hovered .dxWeb_mHorizontalPopOut_Moderno, .dxm-hovered .dxWeb_mSubMenuItemChecked_Moderno, .dxm-hovered .dxWeb_mVerticalPopOut_Moderno, .dxm-hovered .dxWeb_mVerticalPopOutRtl_Moderno, .dxm-scrollBtnHovered .dxWeb_mScrollDown_Moderno, .dxm-scrollBtnHovered .dxWeb_mScrollUp_Moderno, .dxpc-closeBtnHover .dxWeb_pcCloseButton_Moderno, .dxpc-collapseBtnChecked .dxWeb_pcCollapseButton_Moderno, .dxpc-collapseBtnHover .dxWeb_pcCollapseButton_Moderno, .dxpc-collapseBtnHover.dxpc-collapseBtnChecked .dxWeb_pcCollapseButton_Moderno, .dxpc-maximizeBtnChecked .dxWeb_pcMaximizeButton_Moderno, .dxpc-maximizeBtnHover .dxWeb_pcMaximizeButton_Moderno, .dxpc-maximizeBtnHover.dxpc-maximizeBtnChecked .dxWeb_pcMaximizeButton_Moderno, .dxpc-pinBtnChecked .dxWeb_pcPinButton_Moderno, .dxpc-pinBtnHover .dxWeb_pcPinButton_Moderno, .dxpc-pinBtnHover.dxpc-pinBtnChecked .dxWeb_pcPinButton_Moderno, .dxpc-refreshBtnHover .dxWeb_pcRefreshButton_Moderno, .dxp-hoverDropDownButton .dxWeb_pPopOut_Moderno, .dxp-pressedDropDownButton .dxWeb_pPopOut_Moderno, .dxr-grExpBtnHover .dxWeb_rPopOut_Moderno, .dxr-itemHover .dxWeb_rPopOut_Moderno, .dxrpCollapsed .dxWeb_rpCollapseButton_Moderno, .dxWeb_edtCheckBoxChecked_Moderno, .dxWeb_edtCheckBoxCheckedDisabled_Moderno, .dxWeb_edtCheckBoxGrayed_Moderno, .dxWeb_edtCheckBoxGrayedDisabled_Moderno, .dxWeb_edtCheckBoxUnchecked_Moderno, .dxWeb_edtCheckBoxUncheckedDisabled_Moderno, .dxWeb_fmCopyButton_Moderno, .dxWeb_fmCopyButtonDisabled_Moderno, .dxWeb_fmCreateButton_Moderno, .dxWeb_fmCreateButtonDisabled_Moderno, .dxWeb_fmDeleteButton_Moderno, .dxWeb_fmDeleteButtonDisabled_Moderno, .dxWeb_fmDwnlButton_Moderno, .dxWeb_fmDwnlButtonDisabled_Moderno, .dxWeb_fmFolder_Moderno, .dxWeb_fmFolderLocked_Moderno, .dxWeb_fmMoveButton_Moderno, .dxWeb_fmMoveButtonDisabled_Moderno, .dxWeb_fmRefreshButton_Moderno, .dxWeb_fmRefreshButtonDisabled_Moderno, .dxWeb_fmRenameButton_Moderno, .dxWeb_fmRenameButtonDisabled_Moderno, .dxWeb_fmThumbnailCheck_Moderno, .dxWeb_igCloseButton_Moderno, .dxWeb_igNavigationBarMarker_Moderno, .dxWeb_igNextButton_Moderno, .dxWeb_igNextButtonDisabled_Moderno, .dxWeb_igNextButtonHover_Moderno, .dxWeb_igNextButtonPressed_Moderno, .dxWeb_igPauseButton_Moderno, .dxWeb_igPlayButton_Moderno, .dxWeb_igPrevButton_Moderno, .dxWeb_igPrevButtonDisabled_Moderno, .dxWeb_igPrevButtonHover_Moderno, .dxWeb_igPrevButtonPressed_Moderno, .dxWeb_isDot_Moderno, .dxWeb_isDotDisabled_Moderno, .dxWeb_isDotPressed_Moderno, .dxWeb_isDotSelected_Moderno, .dxWeb_isNextBtnHor_Moderno, .dxWeb_isNextBtnHorDisabled_Moderno, .dxWeb_isNextBtnVert_Moderno, .dxWeb_isNextBtnVertDisabled_Moderno, .dxWeb_isNextPageBtnHor_Moderno, .dxWeb_isNextPageBtnHorDisabled_Moderno, .dxWeb_isNextPageBtnHorOutside_Moderno, .dxWeb_isNextPageBtnHorOutsideDisabled_Moderno, .dxWeb_isNextPageBtnVert_Moderno, .dxWeb_isNextPageBtnVertDisabled_Moderno, .dxWeb_isNextPageBtnVertOutside_Moderno, .dxWeb_isNextPageBtnVertOutsideDisabled_Moderno, .dxWeb_isPauseBtn_Moderno, .dxWeb_isPlayBtn_Moderno, .dxWeb_isPrevBtnHor_Moderno, .dxWeb_isPrevBtnHorDisabled_Moderno, .dxWeb_isPrevBtnVert_Moderno, .dxWeb_isPrevBtnVertDisabled_Moderno, .dxWeb_isPrevPageBtnHor_Moderno, .dxWeb_isPrevPageBtnHorDisabled_Moderno, .dxWeb_isPrevPageBtnHorOutside_Moderno, .dxWeb_isPrevPageBtnHorOutsideDisabled_Moderno, .dxWeb_isPrevPageBtnVert_Moderno, .dxWeb_isPrevPageBtnVertDisabled_Moderno, .dxWeb_isPrevPageBtnVertOutside_Moderno, .dxWeb_isPrevPageBtnVertOutsideDisabled_Moderno, .dxWeb_izEWCloseButton_Moderno, .dxWeb_izHint_Moderno, .dxWeb_mHorizontalPopOut_Moderno, .dxWeb_mScrollDown_Moderno, .dxWeb_mScrollUp_Moderno, .dxWeb_mSubMenuItem_Moderno, .dxWeb_mSubMenuItemChecked_Moderno, .dxWeb_mVerticalPopOut_Moderno, .dxWeb_mVerticalPopOutRtl_Moderno, .dxWeb_nbCollapse_Moderno, .dxWeb_nbExpand_Moderno, .dxWeb_pAll_Moderno, .dxWeb_pAllDisabled_Moderno, .dxWeb_pcCloseButton_Moderno, .dxWeb_pcCollapseButton_Moderno, .dxWeb_pcMaximizeButton_Moderno, .dxWeb_pcPinButton_Moderno, .dxWeb_pcRefreshButton_Moderno, .dxWeb_pcSizeGrip_Moderno, .dxWeb_pcSizeGripRtl_Moderno, .dxWeb_pFirst_Moderno, .dxWeb_pFirstDisabled_Moderno, .dxWeb_pLast_Moderno, .dxWeb_pLastDisabled_Moderno, .dxWeb_pNext_Moderno, .dxWeb_pNextDisabled_Moderno, .dxWeb_pPopOut_Moderno, .dxWeb_pPopOutDisabled_Moderno, .dxWeb_pPrev_Moderno, .dxWeb_pPrevDisabled_Moderno, .dxWeb_rMinBtn_Moderno, .dxWeb_rMinBtnChecked_Moderno.dxWeb_rMinBtn_Moderno, .dxWeb_rMinBtnChecked_Moderno.dxWeb_rMinBtnHover_Moderno, .dxWeb_rMinBtnChecked_Moderno.dxWeb_rMinBtnPressed_Moderno, .dxWeb_rMinBtnHover_Moderno, .dxWeb_rMinBtnPressed_Moderno, .dxWeb_rpCollapseButton_Moderno, .dxWeb_rPopOut_Moderno, .dxWeb_splHCollapseBackwardButton_Moderno, .dxWeb_splHCollapseBackwardButtonHover_Moderno, .dxWeb_splHCollapseForwardButton_Moderno, .dxWeb_splHCollapseForwardButtonHover_Moderno, .dxWeb_splHSeparator_Moderno, .dxWeb_splHSeparatorHover_Moderno, .dxWeb_splVCollapseBackwardButton_Moderno, .dxWeb_splVCollapseBackwardButtonHover_Moderno, .dxWeb_splVCollapseForwardButton_Moderno, .dxWeb_splVCollapseForwardButtonHover_Moderno, .dxWeb_splVSeparator_Moderno, .dxWeb_splVSeparatorHover_Moderno, .dxWeb_tcScrollLeft_Moderno, .dxWeb_tcScrollLeftDisabled_Moderno, .dxWeb_tcScrollLeftHover_Moderno, .dxWeb_tcScrollLeftPressed_Moderno, .dxWeb_tcScrollRight_Moderno, .dxWeb_tcScrollRightDisabled_Moderno, .dxWeb_tcScrollRightHover_Moderno, .dxWeb_tcScrollRightPressed_Moderno, .dxWeb_tiBackToTop_Moderno, .dxWeb_tvColBtn_Moderno, .dxWeb_tvColBtnRtl_Moderno, .dxWeb_tvExpBtn_Moderno, .dxWeb_tvExpBtnRtl_Moderno, .dxWeb_ucClearButton_Moderno, .dxWeb_ucClearButtonDisabled_Moderno
+{
+    background: url("icon-arrow.png")  no-repeat !important;
+}
+
+.dxm-pImage {
+    margin-left: -13px !important;
+}
+
+.bg_login {
+    background: #00a9c4;
+}
+.form_login_css {
+    background: url("./images/bg-login.png")  no-repeat !important;
+    width: 668px;
+    height: 527px;
+    margin: 40px auto;
+}
+
+.login_title_css {
+    width: 100%;
+    float: left;
+    margin: 308px 0 0 183px;
+    font-weight: bold;
+    font-size: 17px;
+    color: #00a9c4;
+}
+
+.hundress_percent_css {
+    width: 100%;
+    float: left;
+}
+
+.row_title_css {
+    float: left;
+    margin: 12px 0 0 81px;
+    width: 100px;
+    color: #00a9c4;
+    font-size: 14px;
+}
+
+.txtbox_css {
+    float: left;
+    width: 300px;
+}
+
+.row_css {
+    margin: 2px 0 0px 0;
+}
+
+.error_message_css {
+    width: 100%;
+    float: left;
+    font-weight: normal !important;
+    color: red;
+    font-size: 15px;
+    margin: 8px 0 0 0;
+}
+
+.Sprite_NewMail {
+    background: url("./images/icon-edit-email.png")  no-repeat !important;    
+    width: 29px;
+    height: 29px;
+}
+
+.Sprite_Refresh {
+    background: url("./images/icon-refresh-email.png")  no-repeat !important;    
+    width: 29px;
+    height: 29px;    
+}
+
+#LayoutSplitter_1i1i0i0 .LayoutTable, #LayoutSplitter_1i1i1i0_CC .Strut {
+    background: #e6e9ec !important;
+}
+
+#LayoutSplitter_0i1i0i0_CC .NavigationToolbar {
+    background: #ffffff !important;
+}
+
+.Sprite_Settings {
+    width: 35px !important;
+}
+
+div#MailTree_CD {
+    width: 160px;
+}
+
+#NavigationMenu_DXI0_T .dx-vam {
+    visibility: hidden;
+    width: 10px;
+}
+
+#NavigationMenu_DXI0_PImg {
+    background: url("./images/icon-down.png") 0 9px  no-repeat !important;    
+    width: 7px;
+    height: 16px;    
+}
+
+
+#NavigationMenu_DXI0_T #NavigationMenu_DXI0_Img {
+    visibility: visible !important;
+    background: url("./images/logo-sabre.png")  no-repeat !important;    
+    width: 120px;
+    height: 40px;    
+}
+
+.sw_name_css {
+    width: 500px;
+    float: right;
+    height: 100%;
+}
+
+.part_all_css {
+    float: right;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 7px 16px 0 0;    
+}
+
+#InfoMenu_DXI0_T {
+    font-size: 12px;
+    padding: 2px !important;
+}
+
+.part_all_css .part_1 {
+    color: #ffffff;
+}
+
+.part_all_css .part_2 {
+    color: #fde186;
+}
+
+div#AppMenu {
+    margin: -18px 0 0 0;
+}
+
+#LayoutSplitter_1_CC {
+    background: #ffffff;
+}
+
+.title {
+    width: 100%;
+}
+
+#GroupByMenu_DXI0_T .dx-vam {
+    color: #000000 !important;
+}
+
+li.dxm-hovered #GroupByMenu_DXI0_T .dx-vam {
+    color: #ffffff !important;
+}

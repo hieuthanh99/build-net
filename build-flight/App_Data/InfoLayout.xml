@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item Text="" Name="Temp" ToolTip="" />
+  <Item Text="Parameters" Name="Parameters" ToolTip="Set System Paramenters">
+    <Item Text="Set Job Parameters" Name="BIParameters" ToolTip="Set System Paramenters" />
+    <Item Text="Set Other Parameters" Name="OtherParameters" ToolTip="Set System Paramenters" />
+  </Item>  
+  <Item Text="Switch application" Name="SwitchApp" ToolTip="Switch application" />
+  <Item Text="Sign out" ToolTip="Sign out" Name="signout"/>
+</Items>

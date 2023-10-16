@@ -1,0 +1,6 @@
+[2023-09-20 00:37:22][Application_Error][   at OfficeOpenXml.ExcelPackage.Save()
+   at OfficeOpenXml.ExcelPackage.SaveAs(FileInfo file)
+   at Report_RevCost_Division.ASPxCallbackPanel1_Callback(Object sender, CallbackEventArgsBase e) in e:\1.WORK\VNA\App\Website\Reports\Report_RevCost_Division.aspx.cs:line 602
+   at DevExpress.Web.ASPxCallbackPanel.OnCallback(CallbackEventArgsBase e)
+   at DevExpress.Web.ASPxCallbackPanel.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]

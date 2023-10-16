@@ -1,0 +1,393 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Report_RevCost_Department.aspx.cs" Inherits="Report_RevCost_Department" %>
+
+<%@ Register Assembly="DevExpress.Web.ASPxSpreadsheet.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxSpreadsheet" TagPrefix="dx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="Server">
+      <script src="../Scripts/jquery-1.11.1.min.js"></script>
+    <script src="../Scripts/PageModuleBase.js"></script>
+    <script>
+        function ClientReport_ValueChanged(s, e) {
+            var value = s.GetValue();
+            if (value == "RevCostChiTietThuChi") {
+                ClientVersion.SetEnabled(true);
+            }
+            else {
+                ClientVersion.SetEnabled(false);
+            }
+        }
+
+        function ClientPrintReportButton_Click(s, e) {
+            DoCallback(ClientViewReportPanel, function () {
+                ClientViewReportPanel.PerformCallback('GenerateExcel');
+            });
+        }
+    </script>
+    <dx:ASPxSplitter ID="ASPxSplitter1" runat="server" Orientation="Horizontal" Width="100%" Height="100%" SeparatorVisible="false">
+        <Panes>
+            <dx:SplitterPane Size="450" ScrollBars="Auto">
+                <PaneStyle>
+                    <BorderTop BorderWidth="0" />
+                    <Paddings PaddingBottom="0" PaddingRight="0" PaddingTop="0" PaddingLeft="0" />
+                </PaneStyle>
+                <ContentCollection>
+                    <dx:SplitterContentControl>
+                        
+                        <dx:ASPxFormLayout ID="ParameterForm" runat="server" Width="100%" RequiredMarkDisplayMode="Auto" Styles-LayoutGroupBox-Caption-CssClass="layoutGroupBoxCaption" ClientInstanceName="ClientParameterForm"
+                            AlignItemCaptionsInAllGroups="true">
+                            <Items>
+                                <dx:LayoutGroup Caption="List of Reports">
+                                    <Items>
+                                        <dx:LayoutItem ShowCaption="False">
+                                            <LayoutItemNestedControlCollection>
+                                                <dx:LayoutItemNestedControlContainer>
+                                                    <dx:ASPxRadioButtonList ID="rdReport" runat="server" ValueType="System.String"  ReadOnlyStyle-Font-Bold="true"  >
+                                                         <ClientSideEvents ValueChanged="function(s,e){
+                                                                if(s.GetValue() == 'RevCostDanhGiaKehoach' )
+                                                                {
+                                                                    ClientcboVersionBase1.SetEnabled(true);
+                                                                    ClientcboVersionBase2.SetEnabled(true);
+                                                                    ClientcboVersion.SetEnabled(true);
+                                                                    ClientcboFMonth.SetEnabled(true);
+                                                                    ClientcboToMonth.SetEnabled(true);
+                                                                }
+                                                                else
+                                                                {
+                                                                   ClientcboVersionBase1.SetEnabled(false);
+                                                                    ClientcboVersionBase2.SetEnabled(false);
+                                                                    ClientcboVersion.SetEnabled(false);
+                                                                    ClientcboFMonth.SetEnabled(false);
+                                                                    ClientcboToMonth.SetEnabled(false);
+                                                                }
+                                                            }"></ClientSideEvents>
+                                                        <Items>
+                                                            <dx:ListEditItem Value="RevCostChiTietThuChi" Text="1. Kế hoạch sản xuất kinh doanh chi tiết theo Hộ" Selected="true" />
+                                                            <dx:ListEditItem Value="RevCostDanhGiaKehoach" Text="2. Đánh giá thực hiện kế hoạch chi tiết theo Hộ"  />
+                                                            <%--<dx:ListEditItem Value="RevCostSoSanhVersion" Text="2. So sánh Thu - Chi theo hộ Chi Phí Các Version"  />--%>
+                                                        
+                                                        </Items>
+                                                        <Border BorderStyle="None" />
+                                                    </dx:ASPxRadioButtonList>
+                                                </dx:LayoutItemNestedControlContainer>
+                                            </LayoutItemNestedControlCollection>
+                                        </dx:LayoutItem>
+                                    </Items>
+                                </dx:LayoutGroup>
+                                <dx:LayoutGroup Caption="Report Parameters" >
+                                    <Items>
+                                          
+                                         <dx:LayoutItem Caption="1.Version báo cáo năm" Name="LayoutClientcboVersion">
+                                            <LayoutItemNestedControlCollection>
+                                                <dx:LayoutItemNestedControlContainer>
+                                                    <dx:ASPxComboBox ID="cboVersion" runat="server" ValueType="System.Int32" Width="240px" OnInit="cboVersion_Init" ClientInstanceName="ClientcboVersion"></dx:ASPxComboBox>
+                                                </dx:LayoutItemNestedControlContainer>
+                                            </LayoutItemNestedControlCollection>
+                                        </dx:LayoutItem>
+                                        <dx:LayoutItem Caption="2.Version thực hiện cùng kỳ" Name="LayoutClientcboVersionBase1">
+                                            <LayoutItemNestedControlCollection>
+                                                <dx:LayoutItemNestedControlContainer>
+                                                    <dx:ASPxComboBox ID="cboVersionBase1" runat="server" ValueType="System.Int32" Width="240px" OnInit="cboVersionBase1_Init" ClientInstanceName="ClientcboVersionBase1"></dx:ASPxComboBox>
+                                                </dx:LayoutItemNestedControlContainer>
+                                            </LayoutItemNestedControlCollection>
+                                        </dx:LayoutItem>
+                                        <dx:LayoutItem Caption="3.Version thực hiện năm" Name="LayoutClientcboVersionBase2">
+                                            <LayoutItemNestedControlCollection>
+                                                <dx:LayoutItemNestedControlContainer>
+                                                    <dx:ASPxComboBox ID="cboVersionBase2" runat="server" ValueType="System.Int32" Width="240px" OnInit="cboVersionBase2_Init" ClientInstanceName="ClientcboVersionBase2"></dx:ASPxComboBox>
+                                                </dx:LayoutItemNestedControlContainer>
+                                            </LayoutItemNestedControlCollection>
+                                        </dx:LayoutItem>
+                                         <dx:LayoutItem Caption="From Month">
+                                            <LayoutItemNestedControlCollection>
+                                                <dx:LayoutItemNestedControlContainer>
+                                                    <dx:ASPxComboBox ID="cboFMonth" runat ="server" ValueType="System.String" Width="120px" OnInit="cboFMonth_Init" ClientInstanceName="ClientcboFMonth"> </dx:ASPxComboBox>
+                                                </dx:LayoutItemNestedControlContainer>
+                                            </LayoutItemNestedControlCollection>
+                                        </dx:LayoutItem>
+                                        <dx:LayoutItem Caption="To Month">
+                                            <LayoutItemNestedControlCollection>
+                                                <dx:LayoutItemNestedControlContainer>
+                                                    <dx:ASPxComboBox ID="cboToMonth" runat ="server" ValueType="System.String" Width="120px" OnInit="cboToMonth_Init" ClientInstanceName="ClientcboToMonth"> </dx:ASPxComboBox>
+                                                </dx:LayoutItemNestedControlContainer>
+                                            </LayoutItemNestedControlCollection>
+                                        </dx:LayoutItem>
+                                       <%-- <dx:LayoutItem Caption="Curr Version">
+                                            <LayoutItemNestedControlCollection>
+                                                <dx:LayoutItemNestedControlContainer>
+                                                    <dx:ASPxGridLookup ID="gluCurrentVer" runat="server"  KeyFieldName="VerCompanyID" ClientInstanceName="gluCurrentVer" TextFormatString="{0} - {1} - {2}"
+                                                            SelectionMode="Single"  DataSourceID="CurrentVersionDataSource" Width="100px" >
+                                                            
+                                                            <Border BorderWidth="1px" />
+                                                            <Columns>
+                                                                <dx:GridViewDataColumn FieldName="VerCompanyID" Caption="VersionCompany ID">
+                                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                                    <Settings AutoFilterCondition="Contains" />
+                                                                </dx:GridViewDataColumn>
+                                                                <dx:GridViewDataColumn FieldName="VersionName" Caption="Version Name">
+                                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                                    <Settings AutoFilterCondition="Contains" />
+                                                                </dx:GridViewDataColumn>
+                                                                <dx:GridViewDataColumn FieldName="Status" Caption="Status">
+                                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                                    <Settings AutoFilterCondition="Contains" />
+                                                                </dx:GridViewDataColumn>
+                                                            </Columns>
+                                                            <GridViewProperties>
+                                                                <Settings ShowFilterRow="true" />
+                                                                <Settings ShowColumnHeaders="true" />
+                                                                <SettingsPager Mode="ShowPager" />
+                                                                <SettingsBehavior EnableRowHotTrack="True" />
+                                                            </GridViewProperties>
+                                                            <ValidationSettings ErrorDisplayMode="None" ValidateOnLeave="true">
+                                                                <RequiredField IsRequired="true" />
+                                                            </ValidationSettings>
+                                                        </dx:ASPxGridLookup>
+                                                </dx:LayoutItemNestedControlContainer>
+                                            </LayoutItemNestedControlCollection>
+                                        </dx:LayoutItem>
+                                        <dx:LayoutItem Caption="From Month">
+                                            <LayoutItemNestedControlCollection>
+                                                <dx:LayoutItemNestedControlContainer>
+                                                    <dx:ASPxComboBox ID="cboFMonth" runat ="server" ValueType="System.String" Width="40px">
+                                                        <Items>
+                                                            <dx:ListEditItem Value="1" Text="1" />
+                                                            <dx:ListEditItem Value="2" Text="2" />
+                                                            <dx:ListEditItem Value="3" Text="3" />
+                                                            <dx:ListEditItem Value="4" Text="4" />
+                                                            <dx:ListEditItem Value="5" Text="5" />
+                                                            <dx:ListEditItem Value="6" Text="6" />
+                                                            <dx:ListEditItem Value="7" Text="7" />
+                                                            <dx:ListEditItem Value="8" Text="8" />
+                                                            <dx:ListEditItem Value="9" Text="9" />
+                                                            <dx:ListEditItem Value="10" Text="10" />
+                                                            <dx:ListEditItem Value="11" Text="11" />
+                                                            <dx:ListEditItem Value="12" Text="12" />
+                                                        </Items>
+                                                    </dx:ASPxComboBox>
+                                                </dx:LayoutItemNestedControlContainer>
+                                            </LayoutItemNestedControlCollection>
+                                        </dx:LayoutItem>
+                                        <dx:LayoutItem Caption="To Month">
+                                            <LayoutItemNestedControlCollection>
+                                                <dx:LayoutItemNestedControlContainer>
+                                                    <dx:ASPxComboBox ID="cboTMonth" runat ="server" ValueType="System.String" Width="40px">
+                                                        <Items>
+                                                            <dx:ListEditItem Value="1" Text="1" />
+                                                            <dx:ListEditItem Value="2" Text="2" />
+                                                            <dx:ListEditItem Value="3" Text="3" />
+                                                            <dx:ListEditItem Value="4" Text="4" />
+                                                            <dx:ListEditItem Value="5" Text="5" />
+                                                            <dx:ListEditItem Value="6" Text="6" />
+                                                            <dx:ListEditItem Value="7" Text="7" />
+                                                            <dx:ListEditItem Value="8" Text="8" />
+                                                            <dx:ListEditItem Value="9" Text="9" />
+                                                            <dx:ListEditItem Value="10" Text="10" />
+                                                            <dx:ListEditItem Value="11" Text="11" />
+                                                            <dx:ListEditItem Value="12" Text="12" />
+                                                        </Items>
+                                                    </dx:ASPxComboBox>
+                                                </dx:LayoutItemNestedControlContainer>
+                                            </LayoutItemNestedControlCollection>
+                                        </dx:LayoutItem>
+
+                                         <dx:LayoutItem Caption="Ver Base1">
+                                            <LayoutItemNestedControlCollection>
+                                                <dx:LayoutItemNestedControlContainer>
+                                                   <dx:ASPxGridLookup ID="gluVersionBase1" runat="server" KeyFieldName="VerCompanyID" ClientInstanceName="gluVersionBase1" TextFormatString="{0} - {1}"
+                                                            SelectionMode="Single" DataSourceID="CurrentVerBase1DataSource"  Width="100px">
+                                                           
+                                                            <Border BorderWidth="1px" />
+                                                            <Columns>
+                                                                <dx:GridViewDataColumn FieldName="VersionName" Caption="Version Name">
+                                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                                    <Settings AutoFilterCondition="Contains" />
+                                                                </dx:GridViewDataColumn>
+                                                                <dx:GridViewDataColumn FieldName="Status" Caption="Status">
+                                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                                    <Settings AutoFilterCondition="Contains" />
+                                                                </dx:GridViewDataColumn>
+                                                            </Columns>
+                                                            <GridViewProperties>
+                                                                <Settings ShowFilterRow="true" />
+                                                                <Settings ShowColumnHeaders="true" />
+                                                                <SettingsPager Mode="ShowPager" />
+                                                                <SettingsBehavior EnableRowHotTrack="True" />
+                                                            </GridViewProperties>
+                                                            <ValidationSettings ErrorDisplayMode="None" ValidateOnLeave="true">
+                                                                <RequiredField IsRequired="true" />
+                                                            </ValidationSettings>
+                                                        </dx:ASPxGridLookup>
+                                                </dx:LayoutItemNestedControlContainer>
+                                            </LayoutItemNestedControlCollection>
+                                        </dx:LayoutItem>
+                                        
+                                        <dx:LayoutItem Caption="F Month">
+                                            <LayoutItemNestedControlCollection>
+                                                <dx:LayoutItemNestedControlContainer>
+                                                    <dx:ASPxComboBox ID="cboFMonthBase1" runat ="server" ValueType="System.String" Width="40px">
+                                                        <Items>
+                                                            <dx:ListEditItem Value="1" Text="1" />
+                                                            <dx:ListEditItem Value="2" Text="2" />
+                                                            <dx:ListEditItem Value="3" Text="3" />
+                                                            <dx:ListEditItem Value="4" Text="4" />
+                                                            <dx:ListEditItem Value="5" Text="5" />
+                                                            <dx:ListEditItem Value="6" Text="6" />
+                                                            <dx:ListEditItem Value="7" Text="7" />
+                                                            <dx:ListEditItem Value="8" Text="8" />
+                                                            <dx:ListEditItem Value="9" Text="9" />
+                                                            <dx:ListEditItem Value="10" Text="10" />
+                                                            <dx:ListEditItem Value="11" Text="11" />
+                                                            <dx:ListEditItem Value="12" Text="12" />
+                                                        </Items>
+                                                    </dx:ASPxComboBox>
+                                                </dx:LayoutItemNestedControlContainer>
+                                            </LayoutItemNestedControlCollection>
+                                        </dx:LayoutItem>
+                                        <dx:LayoutItem Caption="T Month">
+                                            <LayoutItemNestedControlCollection>
+                                                <dx:LayoutItemNestedControlContainer>
+                                                    <dx:ASPxComboBox ID="cboTMonthBase1" runat ="server" ValueType="System.String" Width="40px">
+                                                        <Items>
+                                                            <dx:ListEditItem Value="1" Text="1" />
+                                                            <dx:ListEditItem Value="2" Text="2" />
+                                                            <dx:ListEditItem Value="3" Text="3" />
+                                                            <dx:ListEditItem Value="4" Text="4" />
+                                                            <dx:ListEditItem Value="5" Text="5" />
+                                                            <dx:ListEditItem Value="6" Text="6" />
+                                                            <dx:ListEditItem Value="7" Text="7" />
+                                                            <dx:ListEditItem Value="8" Text="8" />
+                                                            <dx:ListEditItem Value="9" Text="9" />
+                                                            <dx:ListEditItem Value="10" Text="10" />
+                                                            <dx:ListEditItem Value="11" Text="11" />
+                                                            <dx:ListEditItem Value="12" Text="12" />
+                                                        </Items>
+                                                    </dx:ASPxComboBox>
+                                                </dx:LayoutItemNestedControlContainer>
+                                            </LayoutItemNestedControlCollection>
+                                        </dx:LayoutItem>
+
+                                        <dx:LayoutItem Caption="Ver Base2">
+                                            <LayoutItemNestedControlCollection>
+                                                <dx:LayoutItemNestedControlContainer>
+                                                    <dx:ASPxGridLookup ID="gluVersionBase2" runat="server" KeyFieldName="VerCompanyID" ClientInstanceName="gluVersionBase2" TextFormatString="{0} - {1}"
+                                                            SelectionMode="Single" DataSourceID="CurrentVerBase2DataSource"  Width="100px">
+                                                            
+                                                            <Border BorderWidth="1px" />
+                                                            <Columns>
+                                                                <dx:GridViewDataColumn FieldName="VersionName" Caption="Version Name">
+                                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                                    <Settings AutoFilterCondition="Contains" />
+                                                                </dx:GridViewDataColumn>
+                                                                <dx:GridViewDataColumn FieldName="Status" Caption="Status">
+                                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                                    <Settings AutoFilterCondition="Contains" />
+                                                                </dx:GridViewDataColumn>
+                                                            </Columns>
+                                                            <GridViewProperties>
+                                                                <Settings ShowFilterRow="true" />
+                                                                <Settings ShowColumnHeaders="true" />
+                                                                <SettingsPager Mode="ShowPager" />
+                                                                <SettingsBehavior EnableRowHotTrack="True" />
+                                                            </GridViewProperties>
+                                                            <ValidationSettings ErrorDisplayMode="None" ValidateOnLeave="true">
+                                                                <RequiredField IsRequired="true" />
+                                                            </ValidationSettings>
+                                                        </dx:ASPxGridLookup>
+                                                </dx:LayoutItemNestedControlContainer>
+                                            </LayoutItemNestedControlCollection>
+                                        </dx:LayoutItem>
+                                         
+                                        <dx:LayoutItem Caption="F Month">
+                                            <LayoutItemNestedControlCollection>
+                                                <dx:LayoutItemNestedControlContainer>
+                                                    <dx:ASPxComboBox ID="cboFMonthBase2" runat ="server" ValueType="System.String" Width="40px">
+                                                        <Items>
+                                                            <dx:ListEditItem Value="1" Text="1" />
+                                                            <dx:ListEditItem Value="2" Text="2" />
+                                                            <dx:ListEditItem Value="3" Text="3" />
+                                                            <dx:ListEditItem Value="4" Text="4" />
+                                                            <dx:ListEditItem Value="5" Text="5" />
+                                                            <dx:ListEditItem Value="6" Text="6" />
+                                                            <dx:ListEditItem Value="7" Text="7" />
+                                                            <dx:ListEditItem Value="8" Text="8" />
+                                                            <dx:ListEditItem Value="9" Text="9" />
+                                                            <dx:ListEditItem Value="10" Text="10" />
+                                                            <dx:ListEditItem Value="11" Text="11" />
+                                                            <dx:ListEditItem Value="12" Text="12" />
+                                                        </Items>
+                                                    </dx:ASPxComboBox>
+                                                </dx:LayoutItemNestedControlContainer>
+                                            </LayoutItemNestedControlCollection>
+                                        </dx:LayoutItem>
+                                        <dx:LayoutItem Caption="T Month">
+                                            <LayoutItemNestedControlCollection>
+                                                <dx:LayoutItemNestedControlContainer>
+                                                    <dx:ASPxComboBox ID="cboTMonthBase2" runat ="server" ValueType="System.String" Width="40px">
+                                                        <Items>
+                                                            <dx:ListEditItem Value="1" Text="1" />
+                                                            <dx:ListEditItem Value="2" Text="2" />
+                                                            <dx:ListEditItem Value="3" Text="3" />
+                                                            <dx:ListEditItem Value="4" Text="4" />
+                                                            <dx:ListEditItem Value="5" Text="5" />
+                                                            <dx:ListEditItem Value="6" Text="6" />
+                                                            <dx:ListEditItem Value="7" Text="7" />
+                                                            <dx:ListEditItem Value="8" Text="8" />
+                                                            <dx:ListEditItem Value="9" Text="9" />
+                                                            <dx:ListEditItem Value="10" Text="10" />
+                                                            <dx:ListEditItem Value="11" Text="11" />
+                                                            <dx:ListEditItem Value="12" Text="12" />
+                                                        </Items>
+                                                    </dx:ASPxComboBox>
+                                                </dx:LayoutItemNestedControlContainer>
+                                            </LayoutItemNestedControlCollection>
+                                        </dx:LayoutItem>--%>
+                                    </Items>
+                                </dx:LayoutGroup>
+                                <dx:EmptyLayoutItem></dx:EmptyLayoutItem>
+
+                                <dx:LayoutItem Caption="">
+                                    <LayoutItemNestedControlCollection>
+                                        <dx:LayoutItemNestedControlContainer>
+                                            <dx:ASPxButton ID="btnPrintReport" runat="server" Text="View Report" AutoPostBack="false" ClientInstanceName="ClientPrintReportButton"  UseSubmitBehavior="true">
+                                                 <ClientSideEvents Click="ClientPrintReportButton_Click" />
+                                            </dx:ASPxButton>
+                                        </dx:LayoutItemNestedControlContainer>
+                                    </LayoutItemNestedControlCollection>
+                                </dx:LayoutItem>
+                            </Items>
+                            <Styles>
+                                <LayoutGroupBox>
+                                    <Caption CssClass="layoutGroupBoxCaption"></Caption>
+                                </LayoutGroupBox>
+                            </Styles>
+                        </dx:ASPxFormLayout>
+                    </dx:SplitterContentControl>
+                </ContentCollection>
+            </dx:SplitterPane>
+            <dx:SplitterPane ScrollBars="Auto">
+                <PaneStyle>
+                    <BorderTop BorderWidth="0" />
+                    <Paddings PaddingBottom="0" PaddingRight="0" PaddingTop="0" PaddingLeft="0" />
+                </PaneStyle>
+                  <ContentCollection>
+                    <dx:SplitterContentControl>
+                        <dx:ASPxCallbackPanel ID="ASPxCallbackPanel1" runat="server" Width="100%" Height="100%" ClientInstanceName="ClientViewReportPanel" RenderMode="Div" OnCallback="ASPxCallbackPanel1_Callback">
+                            <PanelCollection>
+                                <dx:PanelContent>
+                                    <dx:ASPxSpreadsheet ID="ASPxSpreadsheet1" runat="server" WorkDirectory="~/App_Data/WorkDirectory" Width="100%" Height="100%"  ShowConfirmOnLosingChanges="false" ShowSheetTabs="false" RibbonMode="OneLineRibbon" >
+                                        <Border BorderWidth="0" />
+                                    </dx:ASPxSpreadsheet>
+                                </dx:PanelContent>
+                            </PanelCollection>
+                        </dx:ASPxCallbackPanel>
+                    </dx:SplitterContentControl>
+                </ContentCollection>
+            </dx:SplitterPane>
+        </Panes>
+    </dx:ASPxSplitter>
+<%--     <dx:EntityServerModeDataSource ID="CurrentVersionDataSource" runat="server" OnSelecting="CurrentVersionDataSource_Selecting" />
+     <dx:EntityServerModeDataSource ID="CurrentVerBase1DataSource" runat="server" OnSelecting="CurrentVerBase1DataSource_Selecting" />
+     <dx:EntityServerModeDataSource ID="CurrentVerBase2DataSource" runat="server" OnSelecting="CurrentVerBase2DataSource_Selecting" />
+     <dx:EntityServerModeDataSource ID="CurrentVerBase3DataSource" runat="server" OnSelecting="CurrentVerBase3DataSource_Selecting" />--%>
+    <dx:ASPxHiddenField ID="RevCostHidenField" runat="server" ClientInstanceName="ClientRevCostHiddenField"></dx:ASPxHiddenField>
+</asp:Content>
+

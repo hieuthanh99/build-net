@@ -1,0 +1,20 @@
+[2023-04-16 07:53:17][Application_Error][   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at Business_RevenueCost_AutoPricing.GenerateDetail(Decimal autoPricingID) in e:\1.WORK\BAMBOO\App\Website\Business\RevenueCost\AutoPricing.aspx.cs:line 230
+   at Business_RevenueCost_AutoPricing.AutoPricingDetailGrid_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) in e:\1.WORK\BAMBOO\App\Website\Business\RevenueCost\AutoPricing.aspx.cs:line 129
+   at DevExpress.Web.ASPxGridView.RaiseCustomCallback(ASPxGridCustomCallbackEventArgs e)
+   at DevExpress.Web.ASPxGridBase.CBCustomCallBack(String[] args)
+   at DevExpress.Web.ASPxGridBase.DoCallBackPostBack(String eventArgument)
+   at DevExpress.Web.ASPxGridBase.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]
+[2023-04-16 07:54:10][Application_Error][   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at Business_RevenueCost_AutoPricing.GenerateDetail(Decimal autoPricingID) in e:\1.WORK\BAMBOO\App\Website\Business\RevenueCost\AutoPricing.aspx.cs:line 230
+   at Business_RevenueCost_AutoPricing.AutoPricingDetailGrid_CustomCallback(Object sender, ASPxGridViewCustomCallbackEventArgs e) in e:\1.WORK\BAMBOO\App\Website\Business\RevenueCost\AutoPricing.aspx.cs:line 129
+   at DevExpress.Web.ASPxGridView.RaiseCustomCallback(ASPxGridCustomCallbackEventArgs e)
+   at DevExpress.Web.ASPxGridBase.CBCustomCallBack(String[] args)
+   at DevExpress.Web.ASPxGridBase.DoCallBackPostBack(String eventArgument)
+   at DevExpress.Web.ASPxGridBase.RaiseCallbackEvent(String eventArgument)
+   at DevExpress.Web.ASPxWebControl.System.Web.UI.ICallbackEventHandler.RaiseCallbackEvent(String eventArgument)]
